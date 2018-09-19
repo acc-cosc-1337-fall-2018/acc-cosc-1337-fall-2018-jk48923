@@ -1,6 +1,7 @@
 #include<iostream>
 //DO NOT WRITE FUNCTION CODE HERE; USE dna.cpp for function implementation
 
+auto point_mutation = get_point_mutations("GAGCCTACTAACGGGAT", "CATCGTAATGACGG")
 
 /**
 Given two dna strings returns the hamming distance of the strings.

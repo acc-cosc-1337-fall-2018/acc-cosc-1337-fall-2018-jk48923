@@ -1,4 +1,5 @@
 //write the dna.h include statement here
+#include "dna.h"
 
 int main()
 {
