@@ -20,30 +20,18 @@ TEST_CASE("Test get point mutations", "Dna strings ") {
 
 /*
 Create a test case for std::string get_dna_complement(std::string dna_string)
-with arguments: 
+with arguments:
 AAAACCCGGT result should be ACCGGGTTTT
 CCCGGAAAAT result should be ATTTTCCGGG
 */
 TEST_CASE("Test get dna complement", "Dna string ") {
 
-	//REQUIRE(get_dna_complement("AAAACCCGGT", "AAAACCCG") == -1);
 
 	REQUIRE(get_dna_complement("AAAACCCGGT") == ACCGGGTTTT);
 	REQUIRE(get_dna_complement("CCCGGAAAAT") == ATTTTCCGGG);
 
-	//REQUIRE(get_dna_complement("AAAACCCGGT", "AAAACCCGGT") == 0);
-	//REQUIRE(get_dna_complement("CCCGGAAAAT", "CCCGGAAAAT") == 0);
-
-	//REQUIRE(get_dna_complement("AAAACCCGGT") == 5);
-	//REQUIRE(get_dna_complement("CCCGGAAAAT") == 5);
-
-	//REQUIRE(get_dna_complement("AAAACCCGGT", "ACCGGGTTTT") == 5);
-	//REQUIRE(get_dna_complement("CCCGGAAAAT", "ATTTTCCGGG") == 5);
-
 
 }
-
-
 
 /*
 Create a test case for transrcribe_dna_into_rna with arguments:
@@ -56,19 +44,8 @@ TEST_CASE("Test get transrcribe dna into rna ", "Dna string ") {
 	REQUIRE(transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT") == GAUGGAACUUGACUACGUAAAUU);
 	REQUIRE(transcribe_dna_into_rna("AAATTGATCTTGACTACGTGGAA") == AAAUUGAUCUUGACUACGUGGAA);
 
-	//REQUIRE(transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT") == 5);
-	//REQUIRE(transcribe_dna_into_rna("AAATTGATCTTGACTACGTGGAA") == 5);
-
-	//REQUIRE(transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GATGGAACTTGACTACGTAAATT") == 0);
-	//REQUIRE(transcribe_dna_into_rna("AAATTGATCTTGACTACGTGGAA", "AAATTGATCTTGACTACGTGGAA") == 0);
-
-	//REQUIRE(transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GAUGGAACUUGACUACGUAAAUU") == 5);
-	//REQUIRE(transcribe_dna_into_rna("AAATTGATCTTGACTACGTGGAA", "AAAUUGAUCUUGACUACGUGGAA") == 5);
 
 }
-
-
-
 
 /*create a test case for function get_gc_content with arguments
 CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT
