@@ -7,13 +7,14 @@ int main()
 	//Use the function arguments from the test cases in dna_test.cpp
 	//Example:
 	
-	//auto point_mutation = get_point_mutations("GAGCCTACTAACGGGAT", "CATCGTAATGACGG");
+	auto point_mutation = get_point_mutations("GAGCCTACTAACGGGAT", "CATCGTAATGACGG");
 	//std::cout << point_mutation;
 
-	//auto point_complement = get_dna_complement("AAAACCCGGT", "ACCGGGTTTT");
+	auto point_complement = get_dna_complement("AAAACCCGGT", "ACCGGGTTTT");
+	//std::cout << point_complement;
 
-	//auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GAUGGAACUUGACUACGUAAAUU");
-	
+	auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GAUGGAACUUGACUACGUAAAUU");
+	//std::cout << point_transrcribe;
 
 	return 0;
 }

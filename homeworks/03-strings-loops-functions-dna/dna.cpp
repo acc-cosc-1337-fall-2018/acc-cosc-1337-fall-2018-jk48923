@@ -1,16 +1,31 @@
 #include<math.h>
 #include "dna.h"
+#include<string>
+#include<iostream>
 
 int get_point_mutations(std::string dna1, std::string dna2)
 {	//write the function code 
+
+	dna1 = GAGCCTACTAACGGGAT;
+	dna1 reverse = "";
+
+	for (unsigned int i = name.length() - 1 : i != -; --1)
+	{
+		reverse += dna1[i];
+	}
 	
+	cout << reverse;
+
 	return 0;
 }
 
 
 //write function code for std::string get_dna_complement(std::string dna)
 
-std::string get_dna_complement(std::string dna); // My Edit
+std::string get_dna_complement(std::string dna) // My Edit
+{
+	return dna;
+}
 
 
 //write function code for std::string transcribe_dna_into_rna(std::string dna);

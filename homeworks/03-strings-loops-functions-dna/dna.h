@@ -31,7 +31,7 @@ Sample Output (function return value)
 
 */
 
-//dna_string1 : GAGCCTACTAACGGGAT;
+//dna_string1 = GAGCCTACTAACGGGAT;
 //dna_string2 : CATCGTAATGACGGCCT;
 
 //std::cout << "DNA 1: " dna_string1 << '\n';
