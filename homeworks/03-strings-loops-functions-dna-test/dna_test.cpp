@@ -28,11 +28,14 @@ TEST_CASE("Test get dna complement", "Dna string ") {
 
 	//REQUIRE(get_dna_complement("AAAACCCGGT", "AAAACCCG") == -1);
 
-	REQUIRE(get_dna_complement("AAAACCCGGT", "AAAACCCGGT") == 0);
-	REQUIRE(get_dna_complement("CCCGGAAAAT", "CCCGGAAAAT") == 0);
+	REQUIRE(get_dna_complement("AAAACCCGGT") = ACCGGGTTTT);
+	REQUIRE(get_dna_complement("CCCGGAAAAT") = ATTTTCCGGG);
 
-	REQUIRE(get_dna_complement("AAAACCCGGT", "ACCGGGTTTT") == 5);
-	REQUIRE(get_dna_complement("CCCGGAAAAT", "ATTTTCCGGG") == 5);
+	//REQUIRE(get_dna_complement("AAAACCCGGT", "AAAACCCGGT") == 0);
+	//REQUIRE(get_dna_complement("CCCGGAAAAT", "CCCGGAAAAT") == 0);
+
+	//REQUIRE(get_dna_complement("AAAACCCGGT", "ACCGGGTTTT") == 5);
+	//REQUIRE(get_dna_complement("CCCGGAAAAT", "ATTTTCCGGG") == 5);
 
 
 }
@@ -47,11 +50,14 @@ AAATTGATCTTGACTACGTGGAA result should be AAAUUGAUCUUGACUACGUGGAA
 */
 TEST_CASE("Test get transrcribe dna into rna ", "Dna string ") {
 
-	REQUIRE(get_dna_complement("GATGGAACTTGACTACGTAAATT", "GATGGAACTTGACTACGTAAATT") == 0);
-	REQUIRE(get_dna_complement("AAATTGATCTTGACTACGTGGAA", "AAATTGATCTTGACTACGTGGAA") == 0);
+	REQUIRE(transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT") = GAUGGAACUUGACUACGUAAAUU);
+	REQUIRE(transcribe_dna_into_rna("AAATTGATCTTGACTACGTGGAA") = AAAUUGAUCUUGACUACGUGGAA);
 
-	REQUIRE(get_dna_complement("GATGGAACTTGACTACGTAAATT", "GAUGGAACUUGACUACGUAAAUU") == 5);
-	REQUIRE(get_dna_complement("AAATTGATCTTGACTACGTGGAA", "AAAUUGAUCUUGACUACGUGGAA") == 5);
+	//REQUIRE(transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GATGGAACTTGACTACGTAAATT") == 0);
+	//REQUIRE(transcribe_dna_into_rna("AAATTGATCTTGACTACGTGGAA", "AAATTGATCTTGACTACGTGGAA") == 0);
+
+	//REQUIRE(transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GAUGGAACUUGACUACGUAAAUU") == 5);
+	//REQUIRE(transcribe_dna_into_rna("AAATTGATCTTGACTACGTGGAA", "AAAUUGAUCUUGACUACGUGGAA") == 5);
 
 }
 

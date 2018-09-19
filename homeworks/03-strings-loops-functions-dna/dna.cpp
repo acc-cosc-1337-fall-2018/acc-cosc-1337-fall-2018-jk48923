@@ -15,7 +15,10 @@ std::string get_dna_complement(std::string dna); // My Edit
 
 //write function code for std::string transcribe_dna_into_rna(std::string dna);
 
-std::string transcribe_dna_into_rna(std::string dna); // My Edit
+std::string transcribe_dna_into_rna(std::string dna) // My Edit
+{
+	return dna;
+}
 
 double get_gc_content(std::string dna)
 {
@@ -29,9 +32,10 @@ double get_gc_content(std::string dna)
 		//in C++ logical and is && and logical or is ||
 		//usage (and) condition1 && condition2 --- usage (or) condition1 || condition2 
 		//write code to determine if s is 'C' or 'G' then increment gc_count by 1
-		if (s == C || s == G)
+
+		if (s == 'C' || s == 'G')
 		{
-			gc_count += 1
+			gc_count += 1;
 		}
 
 	}
