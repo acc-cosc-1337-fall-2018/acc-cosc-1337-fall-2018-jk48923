@@ -12,7 +12,7 @@
 Given two dna strings returns the hamming distance of the strings.
 
 The Hamming distance between these two strings is 7. Mismatched symbols are
-colored red.  Given two strings s and t of equal length, the Hamming 
+colored red.  Given two strings s and t of equal length, the Hamming
 distance between s and t, denoted dH(s,t), is the number of
 corresponding symbols that differ in s and t.
 
@@ -38,34 +38,34 @@ Sample Output (function return value)
 //std::cout << "DNA 2: " dna_string2;
 
 
-int get_point_mutations(std::string dna1, std::string dna2);
+int get_point_mutations(std::string dna_mutations_1, std::string dna_mutations_2)
 
 /**
 Given a dna string returns the reverse complement of the dna string.
 
-In DNA strings, symbols "A" and "T" are complements of each other, as are 
-"C" and "G".  The reverse complement of a DNA string s is the string sc 
-formed by reversing the symbols of s(reversing the string), then taking the 
-complement of each symbol (e.g., the reverse complement of "GTCA" is 
+In DNA strings, symbols "A" and "T" are complements of each other, as are
+"C" and "G".  The reverse complement of a DNA string s is the string sc
+formed by reversing the symbols of s(reversing the string), then taking the
+complement of each symbol (e.g., the reverse complement of "GTCA" is
 "TGAC").
 
-IMPORTANT!!: ADD PARAMETER(@param) AND RETURN(@return) COMMENTS 
+IMPORTANT!!: ADD PARAMETER(@param) AND RETURN(@return) COMMENTS
 (see my example above)
 
 */
-std::string get_dna_complement(std::string dna);
+std::string get_dna_complement(std::string dna_complement_1, std::string dna_complement);
 
 /**
 Given a dna string returns the rna of the string.
 
-An RNA string is a string formed from the alphabet containing "A", "C", 
-"G", and "U".  Given a DNA string t corresponding to a coding strand, its 
+An RNA string is a string formed from the alphabet containing "A", "C",
+"G", and "U".  Given a DNA string t corresponding to a coding strand, its
 transcribed RNA string u is formed by replacing all occurrences of "T" in
 t with "U" in u.
 
-IMPORTANT!!: 
+IMPORTANT!!:
 DEFINE FUNCTION PROTOTYPE BELOW AND
-ADD PARAMETER(@param) AND RETURN(@return) COMMENTS 
+ADD PARAMETER(@param) AND RETURN(@return) COMMENTS
 (see my example above)
 */
 
@@ -73,15 +73,15 @@ ADD PARAMETER(@param) AND RETURN(@return) COMMENTS
 //that returns a string
 
 
-std::string transcribe_dna_into_rna(std::string dna);
+std::string transcribe_dna_into_rna(std::string dna_transcribe_1, std::string dna_transcribe_2)
 
 
 
 /**
 Given a dna string returns the gc content of dna.
 
-The GC-content of a DNA string is given by the percentage of symbols in the string 
-that are "C" or "G". For example, the GC-content of "AGCTATAG" is 37.5%. Note that 
+The GC-content of a DNA string is given by the percentage of symbols in the string
+that are "C" or "G". For example, the GC-content of "AGCTATAG" is 37.5%. Note that
 the reverse complement of any DNA string has the same GC-content.
 
 IMPORTANT!!:
@@ -92,7 +92,7 @@ ADD PARAMETER(@param) AND RETURN(@return) COMMENTS
 
 //define function prototype for get_gc_content with a string parameter that returns
 //a double
-double get_gc_content(std::string dna);
+double get_gc_content(std::string dna_content);
 
 
 /**
@@ -104,7 +104,3 @@ Given a number and precision will return a double rounded to the required precis
 https://stackoverflow.com/questions/11208971/round-a-float-to-a-regular-grid-of-predefined-points
 */
 double round_to_precision(double number, int precision);
-
-
-
-
