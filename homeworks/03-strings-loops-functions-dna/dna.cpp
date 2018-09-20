@@ -3,18 +3,13 @@
 #include<string>
 #include<iostream>
 
-// Get dna mutations 
-//std::string dna_mutations_1
-//std::string dna_mutations_2 = 
-
-int get_point_mutations(std::string dna1, std:string dna2)
+int get_point_mutations(std::string dna1, std::string dna2)
 {	//write the function code 
 
 	int equal = 0;
 	if (dna1.size() != dna2.size())
 		return -1;
 }
-
 
 std::string get_dna_complement(std::string dna)
 {
@@ -27,7 +22,7 @@ std::string get_dna_complement(std::string dna)
 	}
 
 	// Needs finising
-	for (int i = 0; < dna.size(); ++i)
+	for (int i = 0; i = dna.size(); ++i)
 	{
 		std::cout << dna[i] << std::endl;
 	}
@@ -38,7 +33,23 @@ std::string get_dna_complement(std::string dna)
 
 std::string transcribe_dna_into_rna(std::string dna)
 {
-	return dna_transcribe_1, dna_transcribe_2;
+	//std::string rna;
+
+	//switch (c) {
+	//case 'A':
+	//	*string_rna = 'T';
+	//	break;
+	//case 'G':
+	//	*string_rna = 'C';
+	//	break;
+	//case 'C':
+	//	*string_rna = 'G';
+	//	break;
+	//case 'T':
+	//	*string_rna = 'A';
+	//	break;
+	//}
+	//return dna;
 }
 
 

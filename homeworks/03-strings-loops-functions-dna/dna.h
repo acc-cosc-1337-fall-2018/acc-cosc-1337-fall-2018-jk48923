@@ -1,12 +1,6 @@
 #include<iostream>
 //DO NOT WRITE FUNCTION CODE HERE; USE dna.cpp for function implementation
 
-//auto point_mutation = get_point_mutations("GAGCCTACTAACGGGAT", "CATCGTAATGACGG");
-
-//auto point_complement = get_dna_complement("AAAACCCGGT", "ACCGGGTTTT");
-
-//auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GAUGGAACUUGACUACGUAAAUU");
-
 
 /**
 Given two dna strings returns the hamming distance of the strings.

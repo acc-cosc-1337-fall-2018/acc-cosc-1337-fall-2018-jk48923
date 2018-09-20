@@ -17,13 +17,8 @@ int main()
 	auto point_complement = get_dna_complement("AAAACCCGGT", "ACCGGGTTTT");
 	//cout << point_complement;
 
-	// Get dna transcribe define
-	//dna_transcribe_1 = "GAUGGAACUUGACUACGUAAAUU";
-	//dna_transcribe_2 = "AAAUUGAUCUUGACUACGUGGAA";
 
 	auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GAUGGAACUUGACUACGUAAAUU");
-	//auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT");
-	std::cout << "Point Transrcribe: " << point_transrcribe;
 
 
 	auto point_get = get_gc_content("CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT");
