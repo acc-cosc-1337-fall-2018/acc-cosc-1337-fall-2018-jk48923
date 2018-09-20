@@ -1,7 +1,7 @@
 //write the dna.h include statement here
 #include "dna.h"
 
-using std::string; using std::cout;
+using std::string;
 
 int main()
 {
@@ -11,18 +11,23 @@ int main()
 
 
 	auto point_mutation = get_point_mutations("GAGCCTACTAACGGGAT", "CATCGTAATGACGG");
-	cout << point_mutation;
+	//cout << point_mutation;
 
 
 	auto point_complement = get_dna_complement("AAAACCCGGT", "ACCGGGTTTT");
-	cout << point_complement;
+	//cout << point_complement;
 
-	//auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GAUGGAACUUGACUACGUAAAUU");
-	auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT");
-	cout << point_transrcribe;
+	// Get dna transcribe define
+	//dna_transcribe_1 = "GAUGGAACUUGACUACGUAAAUU";
+	//dna_transcribe_2 = "AAAUUGAUCUUGACUACGUGGAA";
+
+	auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GAUGGAACUUGACUACGUAAAUU");
+	//auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT");
+	std::cout << "Point Transrcribe: " << point_transrcribe;
+
 
 	auto point_get = get_gc_content("CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT");
-	cout << point_get;
+	//cout << point_get;
 
 	return 0;
 }

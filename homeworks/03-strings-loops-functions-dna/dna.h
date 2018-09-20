@@ -34,11 +34,8 @@ Sample Output (function return value)
 //dna_string1 = GAGCCTACTAACGGGAT;
 //dna_string2 : CATCGTAATGACGGCCT;
 
-//std::cout << "DNA 1: " dna_string1 << '\n';
-//std::cout << "DNA 2: " dna_string2;
 
-
-int get_point_mutations(std::string dna_mutations_1, std::string dna_mutations_2)
+int get_point_mutations(std::string dna);
 
 /**
 Given a dna string returns the reverse complement of the dna string.
@@ -53,7 +50,7 @@ IMPORTANT!!: ADD PARAMETER(@param) AND RETURN(@return) COMMENTS
 (see my example above)
 
 */
-std::string get_dna_complement(std::string dna_complement_1, std::string dna_complement);
+std::string get_dna_complement(std::string dna);
 
 /**
 Given a dna string returns the rna of the string.
@@ -73,7 +70,7 @@ ADD PARAMETER(@param) AND RETURN(@return) COMMENTS
 //that returns a string
 
 
-std::string transcribe_dna_into_rna(std::string dna_transcribe_1, std::string dna_transcribe_2)
+std::string transcribe_dna_into_rna(std::string dna);
 
 
 
@@ -92,7 +89,7 @@ ADD PARAMETER(@param) AND RETURN(@return) COMMENTS
 
 //define function prototype for get_gc_content with a string parameter that returns
 //a double
-double get_gc_content(std::string dna_content);
+double get_gc_content(std::string dna);
 
 
 /**
