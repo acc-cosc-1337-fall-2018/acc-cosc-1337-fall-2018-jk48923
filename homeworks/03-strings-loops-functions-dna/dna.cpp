@@ -21,7 +21,6 @@ std::string get_dna_complement(std::string dna)
 		dna_reverse += dna[i];
 	}
 
-	// Needs finising
 	for (int i = 0; i = dna.size(); ++i)
 	{
 		std::cout << dna[i] << std::endl;
@@ -35,22 +34,24 @@ std::string transcribe_dna_into_rna(std::string dna)
 {
 	//std::string rna;
 
-	//switch (c) {
-	//case 'A':
-	//	*string_rna = 'T';
-	//	break;
-	//case 'G':
-	//	*string_rna = 'C';
-	//	break;
-	//case 'C':
-	//	*string_rna = 'G';
-	//	break;
-	//case 'T':
-	//	*string_rna = 'A';
-	//	break;
-	//}
+	switch (rna) 
+	{
 
-	return dna;
+	case 'A':
+		*rna = 'T';
+	    break;
+	case 'T':
+		*rna = 'A';
+		break;
+	case 'C':
+	    *rna = 'G';
+		break;
+	case 'G':
+		*rna = 'C';
+		break;
+	}
+
+	return rna;
 }
 
 
