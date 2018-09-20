@@ -49,7 +49,8 @@ std::string transcribe_dna_into_rna(std::string dna)
 	//	*string_rna = 'A';
 	//	break;
 	//}
-	//return dna;
+
+	return dna;
 }
 
 
