@@ -6,9 +6,20 @@
 int get_point_mutations(std::string dna1, std::string dna2)
 {	//write the function code 
 
-	//int equal = 0;
 	if (dna1.size() != dna2.size())
 		return -1;
+
+	int i = 0, hamming_distance = 0;
+
+	while (dna1[i] != dna2[i])
+	{
+		if (dna1[i] != dna2[i])
+			hamming_distance++;
+		i++;
+	}
+
+	return hamming_distance;
+
 }
 
 std::string get_dna_complement(std::string dna)
