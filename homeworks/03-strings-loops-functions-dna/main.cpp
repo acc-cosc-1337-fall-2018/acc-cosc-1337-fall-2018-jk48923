@@ -13,11 +13,11 @@ int main()
 
 	auto point_complement = get_dna_complement("AAAACCCGGT");
 	//auto point_complement = get_dna_complement("AAAACCCGGT", "ACCGGGTTTT");
-	std::cout << point_complement;
+	//std::cout << point_complement;
 
 	auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT");
 	//auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GAUGGAACUUGACUACGUAAAUU");
-	std::cout << point_transrcribe;
+	//std::cout << point_transrcribe;
 
 
 	auto point_get = get_gc_content("CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT");
