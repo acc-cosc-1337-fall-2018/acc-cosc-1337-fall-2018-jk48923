@@ -27,7 +27,7 @@ std::string get_dna_complement(std::string dna)
 	std::string dna_reverse = "";
 
 	// Reverse order
-	for (int i = dna.length(); i >= 0; --i)
+	for (int i = dna.size(); i > 0; --i)
 	{
 		dna_reverse += dna[i];
 	}
