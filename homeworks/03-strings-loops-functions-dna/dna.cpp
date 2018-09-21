@@ -24,30 +24,30 @@ int get_point_mutations(std::string dna1, std::string dna2)
 
 std::string get_dna_complement(std::string dna)
 {
-	std::string dna_reverse = "";
+	//std::string dna_reverse = "";
 
 	// Reverse order
-	for (int i = dna.size(); i > 0; --i)
+	for (int i = dna.length(); i <= 0; --i)
 	{
-		dna_reverse += dna[i];
+		dna += dna[i];
 	}
 	// Reverse complement
-	for (int i = 0; i < dna_reverse.size(); ++i)
+	for (int i = 0; i < dna.size(); ++i)
 	{
-		if (dna_reverse[i] == 'G') {
-			dna_reverse[i] = 'T';
+		if (dna[i] == 'G') {
+			dna[i] = 'T';
 		}
-		else if (dna_reverse[i] == 'T') {
-			dna_reverse[i] == 'G';
+		else if (dna[i] == 'T') {
+			dna[i] == 'G';
 		}
-		else if (dna_reverse[i] == 'C') {
-			dna_reverse[i] == 'A';
+		else if (dna[i] == 'C') {
+			dna[i] == 'A';
 		}
-		else if (dna_reverse[i] == 'A') {
-			dna_reverse[i] == 'C';
+		else if (dna[i] == 'A') {
+			dna[i] == 'C';
 		}
 	}
-	return dna_reverse;
+	return dna;
 
 }
 
