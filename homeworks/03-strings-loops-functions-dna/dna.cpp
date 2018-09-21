@@ -9,45 +9,68 @@ int get_point_mutations(std::string dna1, std::string dna2)
 	//int equal = 0;
 	if (dna1.size() != dna2.size())
 		return -1;
-
-	int i = 0, hamming_distance = 0;
-
-	while (dna1[i] != dna2[i])
-	{
-		if (dna1[i] != dna2[i])
-			hamming_distance++;
-		i++;
-	}
-
-	return hamming_distance;
-
 }
+
+	//int hamming_distance = 0;
+
+	//if (dna1.length() == dna2.length())
+	//{
+	//	for (int i = 0; i < dna1.length(); i++)
+	//	{
+	//		if (dna1[i] != dna2[i])
+	//		{
+	//			hamming_distance += 1;
+	//		}
+	//	}
+	//}
+
+	//dna1[] = "GAGCCTACTAACGGGAT";
+	//dna2[] = "CATCGTAATGACGGCCT";
+
+	//int i = 0, hamming_distance = 0;
+
+	//while (dna1[i] != dna2[i])
+	//{
+	//	if (dna1[i] != dna2[i])
+	//		hamming_distance++;
+	//	i++;
+	//}
+
+	//return hamming_distance;
+
 
 std::string get_dna_complement(std::string dna)
 {
-	std::string dna_reverse = "";
+	std::string dna_reverse;
 
 	// Reverse order
-	for (int i = dna.length(); i >= 0; --i)
+	//for (int i = dna.length(); i >= 0; --i)
+	for (int i = dna.length() - 1; i != -1; --i)
 	{
 		dna_reverse += dna[i];
 	}
+
 	// Reverse complement
 	for (int i = 0; i < dna_reverse.size(); ++i)
 	{
-		if (dna_reverse[i] == 'G') {
-			dna_reverse[i] = 'T';
+		if (dna_reverse[i] == 'G')
+		{
+			dna_reverse[i] == 'T';
 		}
-		else if (dna_reverse[i] == 'T') {
+		else if (dna_reverse[i] == 'T') 
+		{
 			dna_reverse[i] == 'G';
 		}
-		else if (dna_reverse[i] == 'C') {
+		else if (dna_reverse[i] == 'C') 
+		{
 			dna_reverse[i] == 'A';
 		}
-		else if (dna_reverse[i] == 'A') {
+		else if (dna_reverse[i] == 'A') 
+		{
 			dna_reverse[i] == 'C';
 		}
 	}
+
 	return dna_reverse;
 
 }
@@ -59,10 +82,12 @@ std::string transcribe_dna_into_rna(std::string dna)
 
 	for (int i = 0; i < dna.size(); ++i)
 	{
-		if (dna[i] == 'T') {
-			dna[i] = 'U';
+		if (dna[i] == 'T')
+		{
+			dna[i] == 'U';
 		}
-		else if (dna[i] == 'u') {
+		else if (dna[i] == 'u')
+		{
 			dna[i] == 't';
 		}
 	}
