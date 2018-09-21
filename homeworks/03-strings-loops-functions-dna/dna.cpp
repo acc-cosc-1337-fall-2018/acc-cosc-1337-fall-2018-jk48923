@@ -21,22 +21,20 @@ std::string get_dna_complement(std::string dna)
 		dna_reverse += dna[i];
 	}
 	// Reverse complement
-	for (int i = 0; i = dna_reverse.size(); ++i)
+	for (int i = 0; i < dna_reverse.size(); ++i)
 	{
-		if (dna_reverse == 'G') {
+		if (dna_reverse[i] == 'G') {
 			dna_reverse[i] = 'T';
 		}
-		else if (dna_reverse == 'T') {
+		else if (dna_reverse[i] == 'T') {
 			dna_reverse[i] == 'G';
 		}
-		else if (dna_reverse == 'C') {
+		else if (dna_reverse[i] == 'C') {
 			dna_reverse[i] == 'A';
 		}
-		else if (dna_reverse == 'A') {
+		else if (dna_reverse[i] == 'A') {
 			dna_reverse[i] == 'C';
 		}
-		else
-		std::cout << dna_reverse << std::endl;
 	}
 	return dna_reverse;
 
@@ -45,21 +43,19 @@ std::string get_dna_complement(std::string dna)
 
 std::string transcribe_dna_into_rna(std::string dna)
 {
-	std::string rna_reverse;
+	
 
-	for (int i = 0; i = rna_reverse.size(); ++i)
+	for (int i = 0; i < dna.size(); ++i)
 	{
-		if (rna_reverse == 'T') {
-			rna_reverse[i] = 'U';
+		if (dna[i] == 'T') {
+			dna[i] = 'U';
 		}
-		else if (rna_reverse == 'u') {
-			rna_reverse[i] == 't';
+		else if (dna[i] == 'u') {
+			dna[i] == 't';
 		}
-		else
-			std::cout << rna_reverse << std::endl;
 	}
 
-	return rna_reverse;
+	return dna;
 }
 
 

@@ -29,7 +29,7 @@ Sample Output (function return value)
 //dna_string2 : CATCGTAATGACGGCCT;
 
 
-int get_point_mutations(std::string dna);
+int get_point_mutations(std::string dna1, std::string dna2);
 
 /**
 Given a dna string returns the reverse complement of the dna string.

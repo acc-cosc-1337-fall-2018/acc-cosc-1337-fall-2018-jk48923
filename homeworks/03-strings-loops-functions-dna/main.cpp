@@ -11,12 +11,12 @@ int main()
 	auto point_mutation = get_point_mutations("GAGCCTACTAACGGGAT", "CATCGTAATGACGG");
 	std::cout << point_mutation;
 
-	//auto point_complement = get_dna_complement("AAAACCCGGT");
-	auto point_complement = get_dna_complement("AAAACCCGGT", "ACCGGGTTTT");
+	auto point_complement = get_dna_complement("AAAACCCGGT");
+	//auto point_complement = get_dna_complement("AAAACCCGGT", "ACCGGGTTTT");
 	std::cout << point_complement;
 
-	//auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT");
-	auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GAUGGAACUUGACUACGUAAAUU");
+	auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT");
+	//auto point_transrcribe = transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT", "GAUGGAACUUGACUACGUAAAUU");
 	std::cout << point_transrcribe;
 
 
