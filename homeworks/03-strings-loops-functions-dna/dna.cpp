@@ -6,7 +6,7 @@
 int get_point_mutations(std::string dna1, std::string dna2)
 {	//write the function code 
 
-	int equal = 0;
+	//int equal = 0;
 	if (dna1.size() != dna2.size())
 		return -1;
 }
