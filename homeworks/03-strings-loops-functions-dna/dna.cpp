@@ -83,10 +83,10 @@ std::string transcribe_dna_into_rna(std::string dna)
 		{
 			dna[i] == 'U';
 		}
-		else if (dna[i] == 'u')
-		{
-			dna[i] == 't';
-		}
+		//else if (dna[i] == 'u')
+		//{
+		//	dna[i] == 't';
+		//}
 	}
 
 	return dna;
