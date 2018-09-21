@@ -6,6 +6,7 @@
 int get_point_mutations(std::string dna1, std::string dna2)
 {	//write the function code 
 
+	//int equal = 0;
 	if (dna1.size() != dna2.size())
 		return -1;
 
@@ -27,7 +28,7 @@ std::string get_dna_complement(std::string dna)
 	std::string dna_reverse = "";
 
 	// Reverse order
-	for (size_t i = dna.length(); i <= 0; --i)
+	for (int i = dna.length(); i >= 0; --i)
 	{
 		dna_reverse += dna[i];
 	}
