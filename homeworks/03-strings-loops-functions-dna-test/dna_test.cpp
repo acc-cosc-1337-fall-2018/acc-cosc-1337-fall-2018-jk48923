@@ -24,7 +24,8 @@ with arguments:
 AAAACCCGGT result should be ACCGGGTTTT
 CCCGGAAAAT result should be ATTTTCCGGG
 */
-TEST_CASE("Test get dna complement", "Dna string ") {
+TEST_CASE("Test get dna complement", "Dna string ") 
+{
 
 
 	REQUIRE(get_dna_complement("AAAACCCGGT") == "ACCGGGTTTT");
@@ -39,7 +40,8 @@ GATGGAACTTGACTACGTAAATT result should be GAUGGAACUUGACUACGUAAAUU
 AAATTGATCTTGACTACGTGGAA result should be AAAUUGAUCUUGACUACGUGGAA
 
 */
-TEST_CASE("Test get transrcribe dna into rna ", "Dna string ") {
+TEST_CASE("Test get transrcribe dna into rna ", "Dna string ")
+{
 
 	REQUIRE(transcribe_dna_into_rna("GATGGAACTTGACTACGTAAATT") == "GAUGGAACUUGACUACGUAAAUU");
 	REQUIRE(transcribe_dna_into_rna("AAATTGATCTTGACTACGTGGAA") == "AAAUUGAUCUUGACUACGUGGAA");

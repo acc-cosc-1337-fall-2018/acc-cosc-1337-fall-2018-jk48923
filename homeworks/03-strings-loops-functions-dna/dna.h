@@ -25,9 +25,6 @@ Sample Output (function return value)
 
 */
 
-//dna_string1 = GAGCCTACTAACGGGAT;
-//dna_string2 : CATCGTAATGACGGCCT;
-
 
 int get_point_mutations(std::string dna1, std::string dna2);
 

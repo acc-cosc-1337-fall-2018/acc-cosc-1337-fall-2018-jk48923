@@ -9,7 +9,7 @@ int main()
 
 	//auto point_mutation = get_point_mutations("GAGCCTACTAACGGGAT");
 	auto point_mutation = get_point_mutations("GAGCCTACTAACGGGAT", "CATCGTAATGACGG");
-	std::cout << point_mutation;
+	//std::cout << point_mutation;
 
 	auto point_complement = get_dna_complement("AAAACCCGGT");
 	//auto point_complement = get_dna_complement("AAAACCCGGT", "ACCGGGTTTT");
@@ -21,7 +21,7 @@ int main()
 
 
 	auto point_get = get_gc_content("CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT");
-	std::cout << point_get;
+	//std::cout << point_get;
 
 	return 0;
 }
