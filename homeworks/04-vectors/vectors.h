@@ -23,6 +23,8 @@ WRITE THE PARAM AND RETURN COMMENTS BELOW(SEE MY EXAMPLE ABOVE)
 */
 //write function prototype
 
+int sum_of_squares(vector<int>& numbers);
+
 
 
 
@@ -39,6 +41,8 @@ string in a vector of strings
 */
 void replace(vector<string>& strings, const string& old, const string& new_val);
 
+int vector_of_primes(vector<int>& numbers);
+
 
 /*
 Write a function named is_prime with an integer parameter that
@@ -49,7 +53,7 @@ given a number returns true if prime or false if not prime
 */
 //write prototype here
 
-
+int is_prime(vector<int>& numbers);
 
 
 
@@ -72,3 +76,5 @@ Psuedocode:
 	make sure to return vector of ints primes after loop exits
 */
 //write function prototype here
+
+int vector_of_primes(vector<int>& numbers);
