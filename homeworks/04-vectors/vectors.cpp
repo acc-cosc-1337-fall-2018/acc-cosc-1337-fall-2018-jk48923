@@ -88,43 +88,43 @@ given a number returns true if prime or false if not prime
 */
 //write prototype here
 
-bool is_prime(unsigned int number)
-{
-	if (number < 3 && number > 4)
-	{
-		return false;
-	}
-	else if (number % 2 == 0)
-	{
-		return false;
-	}
-	for (int i = 2; i < number / 2; i++)
-	{
-		if (number % i == 0)
-		{
-			return false;
-		}
-	}
-	return true;
-}
-
-//bool isPrime(int num) {
-//	if (num < 2) {
+//bool is_prime(unsigned int number)
+//{
+//	if (number < 2 && number > 4)
+//	{
 //		return false;
 //	}
-//	else if (num == 3) {
-//		return true;
-//	}
-//	else if (num % 2 == 0) {
+//	else if (number % 2 == 0)
+//	{
 //		return false;
 //	}
-//	for (int i = 3, max = sqrt(num); i < max; i += 2) {
-//		if (num % i == 0) {
+//	for (int i = 2; i < number / 2; i++)
+//	{
+//		if (number % i == 0)
+//		{
 //			return false;
 //		}
 //	}
 //	return true;
 //}
+
+bool is_prime(int num) {
+	if (num < 2) {
+		return false;
+	}
+	else if (num == 3 || num == 4) {
+		return true;
+	}
+	else if (num % 2 == 0) {
+		return false;
+	}
+	for (int i = 3, max = sqrt(num); i < max; i += 2) {
+		if (num % i == 0) {
+			return false;
+		}
+	}
+	return true;
+}
 
 //int is_prime(vector<int>& numbers)
 //{
@@ -159,9 +159,24 @@ bool is_prime(unsigned int number)
 //		return 0;
 
 
+/*
+Write a a function named vector_of_primes with an integer parameter
+that Given a number returns all the prime numbers up to the number
 
+	Example given number 10 returns '2,3,5,7,'
+@param int integer value
+@return vector of ints containing prime values up to a value
 
-//write vector_of_primes function code here
+Psuedocode:
+	Create a variable vector of ints named primes
+	loop from 1 to the value of n
+	in the loop call is_prime function you created with an argument of
+	the current vector value at the current loop index
+	if the return value of is_prime is true add the value to the primes vector
+
+	make sure to return vector of ints primes after loop exits
+*/
+//write function prototype here
 
 int vector_of_primes(vector<int>& numbers)
 {

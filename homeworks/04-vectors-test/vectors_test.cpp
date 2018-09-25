@@ -74,11 +74,11 @@ TEST_CASE("Test case for is_prime here with")
 {
 	//vector<int> numbers{ 3, 4 };
 
-	//REQUIRE(is_prime("3") == true);
-	//REQUIRE(is_prime("4") == false);
+	REQUIRE(is_prime(3) == true);
+	REQUIRE(is_prime(4) == false);
 
-	REQUIRE(is_prime(3) == 1);
-	REQUIRE(is_prime(4) == 0);
+	//REQUIRE(is_prime(3) == 1);
+	//REQUIRE(is_prime(4) == 0);
 }
 
 

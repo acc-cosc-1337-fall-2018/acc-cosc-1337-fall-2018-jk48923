@@ -10,8 +10,11 @@ int main()
 	//Write code to call get_max_from_vector with argument
 	//vector of values 4, 5, 1, 50, 6, 77, 0 and display max
 
-	vector <int> numbers = { 4, 5, 1, 50, 6, 77, 0 };
-	std::cout << "Max Values: " << get_max_from_vector(numbers) << std::endl;
+	//vector <int> numbers = { 4, 5, 1, 50, 6, 77, 0 };
+
+	auto  get_max = get_max_from_vector(vector<int>{ 4, 5, 1, 50, 6, 77, 0, 99, 1000, 10, 500, 66, 770, 10 });
+	std::cout << "Max Values: " << get_max << std::endl;
+
 
 	//auto  get_max = get_max_from_vector({ 4, 5, 1, 50, 6, 77, 0, 99, 1000, 10, 500, 66, 770, 10 });
 	//auto get_max_from_vector({ 4, 5, 1, 50, 6, 77, 0, 99, 1000, 10, 500, 66, 770, 10 });
@@ -28,8 +31,10 @@ int main()
 	//write code to call the replace function with argument 
 	//vector of strings "Joe", "joe", "mary", old argument "joe", new argument "John"
 
-	vector<string> names = { "joe", "joe", "mary" };
-	std::cout << "Names: " << names << std::endl;
+	vector<string> names = { "Joe", "joe", "mary" };
+	replace(names, "joe", "John");
+
+	//std::cout << "Names: " << names << std::endl;
 	
 	//write code to call is_prime with value 3 output result
 
