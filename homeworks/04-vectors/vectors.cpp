@@ -2,6 +2,8 @@
 #include<vector>
 #include<iostream>
 
+using std::vector;
+
 /*
 Write a value return function with a vector of ints list reference parameter
 that returns the maximum value of the list
@@ -13,7 +15,7 @@ that returns the maximum value of the list
 int get_max_from_vector(vector<int>& numbers)
 {
 
-	int get_max = INT_MIN;
+	int get_max;
 
 	for (auto i : numbers) {
 		if (i > get_max) get_max = i;
@@ -112,7 +114,7 @@ bool is_prime(int num) {
 	if (num < 2) {
 		return false;
 	}
-	else if (num == 3 || num == 4) {
+	else if (num == 3) {
 		return true;
 	}
 	else if (num % 2 == 0) {
@@ -180,5 +182,17 @@ Psuedocode:
 
 int vector_of_primes(vector<int>& numbers)
 {
+	vector<int> primes;
+
+	for (auto n : primes)
+	{
+		is_prime(numbers);
+
+		//if (is_prime == 1)
+		//{
+		//	is_prime += primes;
+		//}
+	}
+
 	return 0;
 }

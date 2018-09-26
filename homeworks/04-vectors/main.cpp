@@ -3,6 +3,8 @@
 #include "vectors.h"
 #include<iostream>
 
+using std::vector;
+
 
 //dont forget using statement for cout object
 int main() 
@@ -38,12 +40,14 @@ int main()
 	
 	//write code to call is_prime with value 3 output result
 
-	auto is_prime(vector<int>& numbers);
+	vector<int> numbers = { 2, 3, 4 };
+	//auto is_prime(vector<int>& numbers);
 
 	//write code to call vector_of_primes, save return value to a vector of ints
 	//output each int in the return vector
 
-	auto vector_of_primes(vector<int>& numbers);
+	vector<int> numbers = { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 };
+	//auto vector_of_primes(vector<int>& numbers);
 
 
 	return 0;
