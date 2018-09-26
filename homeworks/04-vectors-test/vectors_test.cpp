@@ -42,7 +42,6 @@ TEST_CASE("Test for sum_of_squares")
 }
 
 
-
 //test case for replace function
 TEST_CASE("Test for replace vector element")
 {
@@ -82,9 +81,6 @@ TEST_CASE("test case for is_prime here with")
     REQUIRE(is_prime(4) == false);
 
 }
-
-
-
 
 
 //write test case for vector_of_primes here with
