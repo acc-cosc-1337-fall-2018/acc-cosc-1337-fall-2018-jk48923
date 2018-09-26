@@ -41,7 +41,6 @@ string in a vector of strings
 */
 void replace(vector<string>& strings, const string& old, const string& new_val);
 
-int vector_of_primes(vector<int>& numbers);
 
 
 /*
@@ -53,7 +52,9 @@ given a number returns true if prime or false if not prime
 */
 //write prototype here
 
-int is_prime(vector<int>& numbers);
+//bool is_prime(vector<int>& number);
+
+bool is_prime(int number);
 
 
 
@@ -77,4 +78,4 @@ Psuedocode:
 */
 //write function prototype here
 
-int vector_of_primes(vector<int>& numbers);
+vector<int> vector_of_primes(int number);

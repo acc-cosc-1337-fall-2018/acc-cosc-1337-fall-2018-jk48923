@@ -1,8 +1,8 @@
-#include "vectors.h"
 #include<vector>
 #include<iostream>
+#include<string>
 
-using std::vector;
+using std::vector; using std::string;
 
 /*
 Write a value return function with a vector of ints list reference parameter
@@ -15,18 +15,16 @@ that returns the maximum value of the list
 int get_max_from_vector(vector<int>& numbers)
 {
 
-	int get_max;
+	int get_max = 0;
 
 	for (auto i : numbers) {
-		if (i > get_max) get_max = i;
+		if (i > get_max)
+		{
+			get_max = i;
+		}
 	}
+
 	return get_max;
-
-	//vector<int>::const_iterator it;
-
-	//for (unsigned int i = 0; i < cdf.size(); i++)
-	//	if (cdf[i] < cdfMin)
-	//		cdfMin = cdf[i];
 
 }
 
@@ -40,13 +38,15 @@ WRITE THE PARAM AND RETURN COMMENTS BELOW(SEE MY EXAMPLE ABOVE)
 
 */
 
-int get_sum_of_squares(vector<int>& numbers) 
+int sum_of_squares(vector<int>& numbers) 
 {
-	int square_compute{ 0 };
 
-	for (auto n : numbers) {
-		square_compute += n * n;
+	int square_compute = 0;
+
+	for (auto i : numbers) {
+		square_compute += i * i;
 	}
+
 	return square_compute;
 }
 
@@ -110,55 +110,25 @@ given a number returns true if prime or false if not prime
 //	return true;
 //}
 
-bool is_prime(int num) {
-	if (num < 2) {
-		return false;
+bool is_prime(int number)
+{
+	int prime_number = 0;
+
+	for (int i = 1; i <= number; ++i)
+	{
+		if (number % i == 0)
+		{
+			++prime_number;
+		}	
 	}
-	else if (num == 3) {
+	if (prime_number == 2)
+	{
 		return true;
 	}
-	else if (num % 2 == 0) {
+	else
 		return false;
-	}
-	for (int i = 3, max = sqrt(num); i < max; i += 2) {
-		if (num % i == 0) {
-			return false;
-		}
-	}
-	return true;
 }
 
-//int is_prime(vector<int>& numbers)
-//{
-//	int prime_check;
-//
-//	if (prime_check == 3)
-//	{
-//		return true;
-//	}
-//	else if (prime_check == 4)
-//	{
-//		return false;
-//	}
-//	
-//}
-
-//int prime = 1;;
-//vector<int>primes(n);
-//for (int i = 2; i < n; i++) {
-//	prime = 1;
-//
-//	for (int j = 2; j < i; j++)
-//	{
-//		if (i%j == 0) {
-//			prime = 0;
-//			break;
-//		}
-//		if (prime == 1) {
-//			cout << i << endl;
-//		}
-//		getch();
-//		return 0;
 
 
 /*
@@ -178,21 +148,19 @@ Psuedocode:
 
 	make sure to return vector of ints primes after loop exits
 */
+
 //write function prototype here
 
-int vector_of_primes(vector<int>& numbers)
+vector<int> vector_of_primes(int number)
 {
 	vector<int> primes;
 
-	for (auto n : primes)
+	for (int i = 1; i <= number; ++i)
 	{
-		is_prime(numbers);
-
-		//if (is_prime == 1)
-		//{
-		//	is_prime += primes;
-		//}
+		if (is_prime(i))
+		{
+			primes.push_back(i);
+		}
 	}
-
-	return 0;
+	return primes;
 }
