@@ -2,5 +2,8 @@
 
 int main()
 {
-	get_extended_cost() : double
+
+	InvoiceDetail InvoiceDetail_1(10, 100);
+
+	return 0;
 }
