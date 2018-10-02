@@ -17,14 +17,12 @@ bool TIC_TAC_TOE_BOARD::game_over()
 	{
 		return true;
 	}
-
 	else
 		return false;
 }
 
 void TIC_TAC_TOE_BOARD::start_game(string player)
 {
-
 	for (auto i : player)
 	{
 		if (i == 'X' || i == 'O')
@@ -34,13 +32,6 @@ void TIC_TAC_TOE_BOARD::start_game(string player)
 			clear_board();
 		}
 	}
-	//player == X || player == O;
-
-	// Set next_player to player
-	//next_player = player;
-
-	// Call clear_board function
-	//clear_board;
 }
 
 void TIC_TAC_TOE_BOARD::mark_board(int position)
@@ -48,7 +39,7 @@ void TIC_TAC_TOE_BOARD::mark_board(int position)
 	// Mark pegs vector position with value of next_player 
 	// variable and call set_next_player private function
 
-	vector<string> pegs = next_player;
+	pegs[position -= 1] = next_player;
 
 	set_next_player();
 	
@@ -56,13 +47,13 @@ void TIC_TAC_TOE_BOARD::mark_board(int position)
 
 string TIC_TAC_TOE_BOARD::get_player()
 {
-	return next_player();
+	return next_player;
 }
 
 // Display the board to the screen with current user choices
 void TIC_TAC_TOE_BOARD::display_board()
 {
-	cout << "Cuurent user choices: " << display_board << endl;
+	//cout << "Cuurent user choices: " << display_board << endl;
 
 }
 
@@ -137,10 +128,14 @@ bool TIC_TAC_TOE_BOARD::check_diagonal_win()
 
 void TIC_TAC_TOE_BOARD::clear_board()
 {
+
 }
 
 bool TIC_TAC_TOE_BOARD::check_board_full()
 {
-	return false;
+	for (int i = 0; i < pegs.size(); i++)
+		cout << pegs[i] << " ";
+
+	return 0;
 }
 

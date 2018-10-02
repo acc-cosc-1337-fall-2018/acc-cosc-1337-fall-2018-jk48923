@@ -1,6 +1,7 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 #include "catch.hpp"
 #include "tic_tac_toe_board.h"
+#include<string>
 
 
 TEST_CASE("Test game over")
@@ -17,8 +18,7 @@ TEST_CASE("Test set first player X")
 	TIC_TAC_TOE_BOARD TIC_TAC_TOE_X;
 	TIC_TAC_TOE_X.start_game("X");
 
-	REQUIRE(TIC_TAC_TOE_X.get_player == "X");
-
+	REQUIRE(TIC_TAC_TOE_X.get_player() == "X");
 }
 
 
@@ -28,7 +28,7 @@ TEST_CASE("Test set first player O")
 	TIC_TAC_TOE_BOARD TIC_TAC_TOE_O;
 	TIC_TAC_TOE_O.start_game("O");
 
-	REQUIRE(TIC_TAC_TOE_O.get_player == "O");
+	REQUIRE(TIC_TAC_TOE_O.get_player() == "O");
 }
 
 // Test win by first column	Create an instance of TicTacToe, call start_game() function with argument X, set positions for first player X to 1,4,7.  
@@ -39,9 +39,11 @@ TEST_CASE("Test win by first column", "[X wins first column]")
 	TIC_TAC_TOE_BOARD first_column;
 
 	first_column.start_game("X");
-	first_column.mark_board(1);
-	first_column.mark_board(4);
-	first_column.mark_board(7); 
+	first_column.mark_board(1); // X
+	first_column.mark_board(2); // O
+	first_column.mark_board(4); // X
+	first_column.mark_board(5); // O
+	first_column.mark_board(7); // X
 
 	REQUIRE(first_column.game_over() == true);
 
@@ -52,13 +54,14 @@ TEST_CASE("Test win by first column", "[X wins first column]")
 TEST_CASE("Test win by seccond column", "[X wins seccond column]")
 {
 
-
 	TIC_TAC_TOE_BOARD second_column;
 
 	second_column.start_game("X");
-	second_column.mark_board(2);
-	second_column.mark_board(5);
-	second_column.mark_board(8);
+	second_column.mark_board(2); // X
+	second_column.mark_board(3); // O
+	second_column.mark_board(5); // X
+	second_column.mark_board(7); // O
+	second_column.mark_board(8); // X
 
 	REQUIRE(second_column.game_over() == true);
 
@@ -73,9 +76,11 @@ TEST_CASE("Test win by third column", "[X wins third column]")
 	TIC_TAC_TOE_BOARD third_column;
 
 	third_column.start_game("X");
-	third_column.mark_board(3);
-	third_column.mark_board(6);
-	third_column.mark_board(9);
+	third_column.mark_board(1); // O
+	third_column.mark_board(3); // X
+	third_column.mark_board(6); // X
+	third_column.mark_board(7); // O
+	third_column.mark_board(9); // X
 
 	REQUIRE(third_column.game_over() == true);
 
@@ -89,9 +94,11 @@ TEST_CASE("Test win by first row", "[X wins first row]")
 	TIC_TAC_TOE_BOARD first_row;
 
 	first_row.start_game("X");
-	first_row.mark_board(1);
-	first_row.mark_board(2);
-	first_row.mark_board(3);
+	first_row.mark_board(1); // X
+	first_row.mark_board(5); // O
+	first_row.mark_board(2); // X
+	first_row.mark_board(7); // O
+	first_row.mark_board(3); // X
 
 	REQUIRE(first_row.game_over() == true);
 
@@ -105,9 +112,11 @@ TEST_CASE("Test win by second row", "[X wins second row]")
 	TIC_TAC_TOE_BOARD second_row;
 
 	second_row.start_game("X");
-	second_row.mark_board(4);
-	second_row.mark_board(5);
-	second_row.mark_board(6);
+	second_row.mark_board(2); // O
+	second_row.mark_board(4); // X
+	second_row.mark_board(5); // X
+	second_row.mark_board(6); // X
+	second_row.mark_board(9); // O
 
 	REQUIRE(second_row.game_over() == true);
 
@@ -121,9 +130,11 @@ TEST_CASE("Test win by third row", "[X wins third row]")
 	TIC_TAC_TOE_BOARD third_row;
 
 	third_row.start_game("X");
-	third_row.mark_board(7);
-	third_row.mark_board(8);
-	third_row.mark_board(9);
+	third_row.mark_board(2); // O
+	third_row.mark_board(4); // O
+	third_row.mark_board(7); // X
+	third_row.mark_board(8); // X
+	third_row.mark_board(9); // X
 
 	REQUIRE(third_row.game_over() == true);
 
