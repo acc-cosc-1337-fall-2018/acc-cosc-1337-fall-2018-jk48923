@@ -15,7 +15,7 @@ TEST_CASE("Test invoice get total")
 
 	Invoice_test.add_invoice_detail(InvoiceDetail(10, 10));
 	Invoice_test.add_invoice_detail(InvoiceDetail(5, 5));
-	Invoice_test.add_invoice_detail(InvoiceDetail(10, 10));
+	Invoice_test.add_invoice_detail(InvoiceDetail(100, 2));
 
 	REQUIRE(Invoice_test.get_total() == 325);
 }
