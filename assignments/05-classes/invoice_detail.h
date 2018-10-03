@@ -7,6 +7,7 @@ class InvoiceDetail
 
 public:
 
+	InvoiceDetail() = default;
 	InvoiceDetail(double c, int u) : cost(c), units(u) {}
 
 	double get_extended_cost();

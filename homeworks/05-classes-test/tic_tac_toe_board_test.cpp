@@ -142,3 +142,59 @@ TEST_CASE("Test win by third row", "[X wins third row]")
 
 // Create an instance of TicTacToe, call start_game() function with argument X, set positions for first player X to 1,5,9. 
 // Pick other positions for O. Verify that game_over() is true.  
+
+TEST_CASE("Test win diagonally from top left")
+{
+
+	TIC_TAC_TOE_BOARD diag_top_left;
+
+	diag_top_left.start_game("X");
+	diag_top_left.mark_board(1); // X
+	diag_top_left.mark_board(3); // O
+	diag_top_left.mark_board(5); // X
+	diag_top_left.mark_board(7); // O
+	diag_top_left.mark_board(9); // X
+
+	REQUIRE(diag_top_left.game_over() == true);
+
+}
+
+//Create an instance of TicTacToe, call start_game() function with argument X, set positions for first player X to 7,5,3.  
+// Pick other positions for O. Verify that game_over() is true.    
+TEST_CASE("Test win diagonally from bottom left")
+{
+
+	TIC_TAC_TOE_BOARD diag_bottom_left;
+
+	diag_bottom_left.start_game("X");
+	diag_bottom_left.mark_board(7); // X
+	diag_bottom_left.mark_board(2); // O
+	diag_bottom_left.mark_board(5); // X
+	diag_bottom_left.mark_board(6); // O
+	diag_bottom_left.mark_board(3); // X
+
+	REQUIRE(diag_bottom_left.game_over() == true);
+
+}
+
+// Create an instance of TicTacToe, call start_game() function with argument X, set positions to values where no one wins.  
+// Verify that game_over() is true when all positions have been filled.
+TEST_CASE("Test for no winner")
+{
+	TIC_TAC_TOE_BOARD no_winner;
+
+	no_winner.start_game("X");
+
+	//no_winner.mark_board(0); // O
+	//no_winner.mark_board(1); // X
+	//no_winner.mark_board(2); // O
+	//no_winner.mark_board(3); // O 
+	//no_winner.mark_board(4); // X
+	//no_winner.mark_board(5); // O
+	//no_winner.mark_board(6); // X
+	//no_winner.mark_board(7); // O
+	//no_winner.mark_board(8); // X
+
+
+	REQUIRE(no_winner.game_over() == true);
+}

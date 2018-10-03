@@ -16,7 +16,6 @@ int main()
 {
 	TIC_TAC_TOE_BOARD TIC_TAC_TOE_PLAY;
 
-	int position;
 	string choice;
 
 	bool is_choice_valid;
@@ -52,8 +51,6 @@ int main()
 			//{
 			//	cout << "Enter position for player " << TIC_TAC_TOE_PLAY.get_player() << ": " ;
 			//	cin >> position;
-
-			//	TIC_TAC_TOE_PLAY.mark_board(position);
 
 			//	// Display status
 			//	TIC_TAC_TOE_PLAY.display_board();
