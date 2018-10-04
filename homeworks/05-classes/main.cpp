@@ -39,16 +39,19 @@ int main()
 
 		if (choice == "X" || choice == "O" || choice == "x" || choice == "o")
 		{
-			TIC_TAC_TOE_PLAY.start_game(choice);
+			//TIC_TAC_TOE_PLAY.start_game(choice);
 
 			while (!TIC_TAC_TOE_PLAY.game_over())
 			{
+
 				cout << "Enter position for " << TIC_TAC_TOE_PLAY.get_player() << ": ";
 				cin >> position;
 				TIC_TAC_TOE_PLAY.mark_board(position);
 				TIC_TAC_TOE_PLAY.display_board();
-			}
 
+
+			}
+			cout << "Player " << TIC_TAC_TOE_PLAY.get_player() << " is the winner!";
 		}
 		else
 
