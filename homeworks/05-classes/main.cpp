@@ -39,7 +39,6 @@ int main()
 
 		if (choice == "X" || choice == "O" || choice == "x" || choice == "o")
 		{
-			//TIC_TAC_TOE_PLAY.start_game(choice);
 
 			while (!TIC_TAC_TOE_PLAY.game_over())
 			{
