@@ -186,14 +186,15 @@ TEST_CASE("Test for no winner")
 	no_winner.start_game("X");
 
 	//no_winner.mark_board(0); // O
-	//no_winner.mark_board(1); // X
-	//no_winner.mark_board(2); // O
-	//no_winner.mark_board(3); // O 
-	//no_winner.mark_board(4); // X
-	//no_winner.mark_board(5); // O
-	//no_winner.mark_board(6); // X
-	//no_winner.mark_board(7); // O
-	//no_winner.mark_board(8); // X
+	no_winner.mark_board(1); // X
+	no_winner.mark_board(2); // O
+	no_winner.mark_board(3); // O 
+	no_winner.mark_board(4); // X
+	no_winner.mark_board(5); // O
+	no_winner.mark_board(6); // X
+	no_winner.mark_board(7); // O
+	no_winner.mark_board(8); // X
+	no_winner.mark_board(9); // O
 
 
 	REQUIRE(no_winner.game_over() == true);

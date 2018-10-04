@@ -16,48 +16,49 @@ int main()
 {
 	TIC_TAC_TOE_BOARD TIC_TAC_TOE_PLAY;
 
-	string choice;
+	TIC_TAC_TOE_PLAY.start_game("X");
 
-	bool is_choice_valid;
+	TIC_TAC_TOE_PLAY.start_game("O");
+
+	string choice;
+	int position;
+
+
+
+	while ( true )
 	{
-		// Display game menu
+
 		cout << "Play Tic Tac Toe?" << endl;
 		cout << endl;
-		cout << "Choice X = Player X" << endl;
-		cout << "Choice O = Player O" << endl;
+		cout << "Choice x = Player X" << endl;
+		cout << "Choice o = Player O" << endl;
 		cout << endl;
 		cout << "Enter your choice: ";
 		cin >> choice;
 
-		if (choice == "X" || choice == "O")
-		{
 
-			is_choice_valid = true;
-		}
-		else
-
-		cout << "Please enter X or O!";
-
-		is_choice_valid = false;
-
-
-
-		while(is_choice_valid = true)
+		if (choice == "X" || choice == "O" || choice == "x" || choice == "o")
 		{
 			TIC_TAC_TOE_PLAY.start_game(choice);
 
-			////In the loop, prompt the user for a position from 1 through 9 and update board position.
-			//for (!TIC_TAC_TOE_PLAY.game_over())
-			//{
-			//	cout << "Enter position for player " << TIC_TAC_TOE_PLAY.get_player() << ": " ;
-			//	cin >> position;
+			while (!TIC_TAC_TOE_PLAY.game_over())
+			{
+				cout << "Enter position for " << TIC_TAC_TOE_PLAY.get_player() << ": ";
+				cin >> position;
+				TIC_TAC_TOE_PLAY.mark_board(position);
+				TIC_TAC_TOE_PLAY.display_board();
+			}
 
-			//	// Display status
-			//	TIC_TAC_TOE_PLAY.display_board();
-
-			//}
 		}
+		else
+
+			cout << "Please enter X or O!";
+
+		return false;
+
+
 
 	}
+
 	return 0;
 }

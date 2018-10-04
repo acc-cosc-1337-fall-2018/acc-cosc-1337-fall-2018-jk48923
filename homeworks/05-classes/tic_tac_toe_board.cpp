@@ -128,7 +128,7 @@ bool TIC_TAC_TOE_BOARD::check_diagonal_win()
 
 void TIC_TAC_TOE_BOARD::clear_board()
 {
-	system("CLS");
+	//system("CLS");
 }
 
 bool TIC_TAC_TOE_BOARD::check_board_full()
