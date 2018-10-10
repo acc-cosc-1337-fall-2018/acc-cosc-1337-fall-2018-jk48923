@@ -216,7 +216,7 @@ std::ostream & operator<<(std::ostream & out, const TIC_TAC_TOE_BOARD & OSTREAM_
 	TIC_TAC_TOE_PLAY.start_game("O");
 
 	string choice;
-	int position;
+	//int position;
 
 	while (true)
 	{
@@ -234,18 +234,18 @@ std::ostream & operator<<(std::ostream & out, const TIC_TAC_TOE_BOARD & OSTREAM_
 
 			//TIC_TAC_TOE_BOARD & ISTREAM_POINTER
 
-			while (!TIC_TAC_TOE_PLAY.game_over())
-			{
+			//while (!TIC_TAC_TOE_PLAY.game_over())
+			//{
 
-				out << "Enter position for " << TIC_TAC_TOE_PLAY.get_player() << ": ";
+			//	out << "Enter position for " << TIC_TAC_TOE_PLAY.get_player() << ": ";
 
-				OSTREAM_POINTER.x_win
+			//	OSTREAM_POINTER.x_win
 
-				//std::cin >> position;
-				////.mark_board(position);
+			//	//std::cin >> position;
+			//	////.mark_board(position);
 
 
-			}
+			//}
 
 			out << "Player " << TIC_TAC_TOE_PLAY.get_player() << " is the winner!";
 		}
