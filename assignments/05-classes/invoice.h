@@ -19,7 +19,7 @@ public:
 private:
 
 	// Create a private variable vector of InvoiceDetails named invoice_details.
-	std::vector<InvoiceDetail> invoice_details;
+	vector<InvoiceDetail> invoice_details;
 	double total{ 0 };
 
 
