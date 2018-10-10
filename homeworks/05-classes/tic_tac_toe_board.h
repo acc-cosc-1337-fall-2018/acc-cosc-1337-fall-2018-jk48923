@@ -18,9 +18,9 @@ public:
 
 	friend TIC_TAC_TOE_BOARD operator+(const TIC_TAC_TOE_BOARD & b, const TIC_TAC_TOE_BOARD & b2);
 
-	friend std::ostream & operator<<(std::ostream & out, const TIC_TAC_TOE_BOARD & d);
+	friend std::ostream & operator<<(std::ostream & out, const TIC_TAC_TOE_BOARD & OSTREAM_POINTER);
 
-	friend std::istream & operator>>(std::istream & in, TIC_TAC_TOE_BOARD & d);
+	friend std::istream & operator>>(std::istream & in, TIC_TAC_TOE_BOARD & ISTREAM_POINTER);
 
 
 	bool game_over();

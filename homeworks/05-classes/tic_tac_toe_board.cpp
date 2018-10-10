@@ -12,29 +12,21 @@ using std::cout; using std::endl;
 bool TIC_TAC_TOE_BOARD::game_over()
 {
 
-	
-
-	if (check_column_win() == true && check_row_win() == true || check_diagonal_win() == true || check_board_full() == true)
+	if (check_column_win() == true || check_row_win() == true || check_diagonal_win() == true || check_board_full() == true)
 	{
+		if (next_player == "X")
+		{
+			x_win =+ 1;
+		}
+		else if (next_player == "O")
+		{
+			o_win =+ 1;
+		}
+		else if (next_player != "X" || "O")
+		{
+			c_win =+ 1;
+		}
 
-		//initialize to zero(0), set to 1 when X wins in game_over function
-
-		x_win =+ 1;
-
-		//x_win(0) + 1;
-
-
-		//initialize to zero(0) , set to 1 when O wins    in game_over function 
-
-		//o_win(o) + 1;
-
-		o_win =+ 1;
-
-		//initialize to zero(0) , set to 1 when neither X or O win   in game_over function 
-
-		c_win =+ 1;
-
-		//c_win(c) + 1;
 
 		return true;
 	}
@@ -82,7 +74,7 @@ string TIC_TAC_TOE_BOARD::get_player()
 	return next_player;
 }
 
-// Display the board to the screen with current user choices
+////Display the board to the screen with current user choices
 //void TIC_TAC_TOE_BOARD::display_board()
 //{
 //	//cout << "Cuurent user choices: " << display_board << endl;
@@ -109,7 +101,7 @@ bool TIC_TAC_TOE_BOARD::check_column_win()
 	}
 
 	// Check column if O's win
-	if (pegs[0 && 3 && 6] == "O" || pegs[1 && 4 && 7] == "O" || pegs[2 && 5 && 8] == "O")
+	else if (pegs[0 && 3 && 6] == "O" || pegs[1 && 4 && 7] == "O" || pegs[2 && 5 && 8] == "O")
 	{
 		return true;
 	}
@@ -128,7 +120,7 @@ bool TIC_TAC_TOE_BOARD::check_row_win()
 	}
 
 	// Check row if O's win
-	if (pegs[0 && 1 && 2] == "O" || pegs[3 && 4 && 5] == "O" || pegs[6 && 7 && 8] == "O")
+	else if (pegs[0 && 1 && 2] == "O" || pegs[3 && 4 && 5] == "O" || pegs[6 && 7 && 8] == "O")
 	{
 		return true;
 	}
@@ -148,7 +140,7 @@ bool TIC_TAC_TOE_BOARD::check_diagonal_win()
 	}
 
 	// Check diagonal if O's win
-	if (pegs[0 && 4 && 8] == "O" || pegs[2 && 4 && 6] == "O")
+	else if (pegs[0 && 4 && 8] == "O" || pegs[2 && 4 && 6] == "O")
 	{
 		return true;
 	}
@@ -183,30 +175,27 @@ TIC_TAC_TOE_BOARD operator+(const TIC_TAC_TOE_BOARD & b, const TIC_TAC_TOE_BOARD
 	TIC_TAC_TOE_BOARD_ADD.c_win = b.c_win + b2.c_win;
 
 	return TIC_TAC_TOE_BOARD_ADD;
+
 }
 
 // Capture the position from the keyboard
-std::istream & operator>>(std::istream & in, TIC_TAC_TOE_BOARD & d)
+std::istream & operator>>(std::istream & in, TIC_TAC_TOE_BOARD & ISTREAM_POINTER)
 {
 
-	//int position;
-
-	//cin >> position;
-	//TIC_TAC_TOE_BOARD.mark_board(position);
-
+	int position;
 
 	cout << "Enter the position: ";
-	in >> d.x_win >> d.o_win; // access private data
+	
+	in >> position;
+
+	ISTREAM_POINTER.mark_board(position);
 
 	return in;
 }
 
 // Display the board to the screen with current user choices followed by the current score of x, o, and c.
-std::ostream & operator<<(std::ostream & out, const TIC_TAC_TOE_BOARD & d)
+std::ostream & operator<<(std::ostream & out, const TIC_TAC_TOE_BOARD & OSTREAM_POINTER)
 {
-
-	//out << "This is a test message" << std::endl;
-
 
 	//ostream & operator<<(ostream & out, const Point & point) {
 	//	out << "(" << point.x << "," << point.y << ")";  // access private data
@@ -219,39 +208,51 @@ std::ostream & operator<<(std::ostream & out, const TIC_TAC_TOE_BOARD & d)
 	//	return out;
 	//}
 
-	int choice;
 
-	out << "Play Tic Tac Toe?" << endl;
-	out << endl;
-	out << "Choice x = Player X" << endl;
-	out << "Choice o = Player O" << endl;
-	out << endl;
-	out << "Enter your choice: ";
-	std::cin >> choice;
+	TIC_TAC_TOE_BOARD TIC_TAC_TOE_PLAY;
+
+	TIC_TAC_TOE_PLAY.start_game("X");
+
+	TIC_TAC_TOE_PLAY.start_game("O");
+
+	string choice;
+	int position;
+
+	while (true)
+	{
+
+		out << "Play Tic Tac Toe?" << endl;
+		out << endl;
+		out << "Choice x = Player X" << endl;
+		out << "Choice o = Player O" << endl;
+		out << endl;
+		out << "Enter your choice: ";
+		std::cin >> choice;
+
+		if (choice == "X" || choice == "O" || choice == "x" || choice == "o")
+		{
+
+			//TIC_TAC_TOE_BOARD & ISTREAM_POINTER
+
+			while (!TIC_TAC_TOE_PLAY.game_over())
+			{
+
+				out << "Enter position for " << TIC_TAC_TOE_PLAY.get_player() << ": ";
+
+				OSTREAM_POINTER.x_win
+
+				//std::cin >> position;
+				////.mark_board(position);
 
 
-	//if (choice == "X" || choice == "O" || choice == "x" || choice == "o")
-	//{
-	//	return true;
-	//}
-	//else
+			}
 
-	//cout << "Please enter X or O!";
+			out << "Player " << TIC_TAC_TOE_PLAY.get_player() << " is the winner!";
+		}
+		else
 
-	//return false;
-	//}
+		out << "Please enter X or O!";
 
-	//while( true )
-	//{
-
-	//	cout << "Play Tic Tac Toe?" << endl;
-	//	cout << endl;
-	//	cout << "Choice x = Player X" << endl;
-	//	cout << "Choice o = Player O" << endl;
-	//	cout << endl;
-	//	cout << "Enter your choice: ";
-	//	cin >> choice;
-
-
-	return out;
+		return out;
+	}
 }

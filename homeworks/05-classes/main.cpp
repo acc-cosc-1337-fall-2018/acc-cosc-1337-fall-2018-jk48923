@@ -22,19 +22,12 @@ using std::endl; using std::vector;
 int main()
 {
 
-
-
 	TIC_TAC_TOE_BOARD a;
 	TIC_TAC_TOE_BOARD b;
 	TIC_TAC_TOE_BOARD c;
-
-	// Create a vector of TicTacToeBoard data types initialized with a, b, and c(from above).
+	TIC_TAC_TOE_BOARD result;
 
 	vector<TIC_TAC_TOE_BOARD> types{ a, b, c };
-
-	// Create another instance of TicTacToeBoard result
-
-	TIC_TAC_TOE_BOARD result; 
 
 	// Iterate the vector of TicTacToeBoard
 	// sum the winners using the statement result += current_board_in_vector
@@ -42,63 +35,13 @@ int main()
 	for (auto i : types)
 	{
 		cout << i.get_player() << endl;
-		result += i;
+		//result += i;
 		//result + i;
 	}
 
 	std::cout << a << std::endl;
 	//std::cout << b << std::endl;
 	//std::cout << c << std::endl;
-
-
-
-	//TIC_TAC_TOE_BOARD TIC_TAC_TOE_PLAY;
-
-	//TIC_TAC_TOE_PLAY.start_game("X");
-
-	//TIC_TAC_TOE_PLAY.start_game("O");
-
-	//string choice;
-	//int position;
-
-
-
-	//while ( true )
-	//{
-
-	//	cout << "Play Tic Tac Toe?" << endl;
-	//	cout << endl;
-	//	cout << "Choice x = Player X" << endl;
-	//	cout << "Choice o = Player O" << endl;
-	//	cout << endl;
-	//	cout << "Enter your choice: ";
-	//	cin >> choice;
-
-
-	//	if (choice == "X" || choice == "O" || choice == "x" || choice == "o")
-	//	{
-
-	//		while (!TIC_TAC_TOE_PLAY.game_over())
-	//		{
-
-	//			cout << "Enter position for " << TIC_TAC_TOE_PLAY.get_player() << ": ";
-	//			cin >> position;
-	//			TIC_TAC_TOE_PLAY.mark_board(position);
-	//			//TIC_TAC_TOE_PLAY.display_board();
-
-
-	//		}
-	//		cout << "Player " << TIC_TAC_TOE_PLAY.get_player() << " is the winner!";
-	//	}
-	//	else
-
-	//		cout << "Please enter X or O!";
-
-	//	return false;
-
-
-
-	//}
 
 	return 0;
 }
