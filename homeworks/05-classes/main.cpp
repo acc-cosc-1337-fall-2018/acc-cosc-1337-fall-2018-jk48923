@@ -36,11 +36,10 @@ int main()
 	{
 		cout << i.get_player() << endl;
 		//result += i;
-		//result + i;
 	}
 
 	std::cout << a << std::endl;
-	//std::cout << b << std::endl;
+	//::cout << b << std::endl;
 	//std::cout << c << std::endl;
 
 	return 0;
