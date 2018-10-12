@@ -81,29 +81,32 @@ void TIC_TAC_TOE_BOARD::set_next_player()
 bool TIC_TAC_TOE_BOARD::check_column_win()
 {
 
-	if (pegs[0 && 3 && 6] == "X" || pegs[1 && 4 && 7] == "X" || pegs[2 && 5 && 8] == "X")
+	//if (pegs[0 && 3 && 6] == "X" || pegs[1 && 4 && 7] == "X" || pegs[2 && 5 && 8] == "X")
 
 
 	//if (pegs[0] == pegs[1] && pegs[3] == pegs[4] && pegs[6] == pegs[7] 
 	//	&& pegs[0] == "X" || pegs[0] == "O" && pegs[3] == "X" || pegs[3] == "O" && pegs[6] == "X" || pegs[6] == "O")
+
+	if (pegs[0] == pegs[3] && pegs[3] == pegs[6] && pegs[6] == pegs[7]
+		&& pegs[0] == "X" || pegs[0] == "O" && pegs[3] == "X" || pegs[3] == "O" && pegs[6] == "X" || pegs[6] == "O")
 	{
 		return true;
 	}
 
-	if (pegs[0 && 3 && 6] == "O" || pegs[1 && 4 && 7] == "O" || pegs[2 && 5 && 8] == "O")
+	//if (pegs[0 && 3 && 6] == "O" || pegs[1 && 4 && 7] == "O" || pegs[2 && 5 && 8] == "O")
 
-	//else if (pegs[1] == pegs[2] && pegs[4] == pegs[5] && pegs[7] == pegs[8] 
-	//	&& pegs[1] == "X" || pegs[1] == "O" && pegs[4] == "X" || pegs[4] == "O" && pegs[7] == "X" || pegs[7] == "O")
+	else if (pegs[1] == pegs[2] && pegs[4] == pegs[5] && pegs[7] == pegs[8] 
+		&& pegs[1] == "X" || pegs[1] == "O" && pegs[4] == "X" || pegs[4] == "O" && pegs[7] == "X" || pegs[7] == "O")
 	{
 		return true;
 	}
 
 
-	//else if (pegs[2] == pegs[3] && pegs[5] == pegs[6] && pegs[8] == pegs[9] 
-	//	&& pegs[2] == "X" || pegs[2] == "O" && pegs[5] == "X" || pegs[5] == "O" && pegs[8] == "X" || pegs[8] == "O")
-	//{
-	//	return true;
-	//}
+	else if (pegs[2] == pegs[3] && pegs[5] == pegs[6] && pegs[8] == pegs[9] 
+		&& pegs[2] == "X" || pegs[2] == "O" && pegs[5] == "X" || pegs[5] == "O" && pegs[8] == "X" || pegs[8] == "O")
+	{
+		return true;
+	}
 	else
 	{
 		return false;
@@ -113,29 +116,29 @@ bool TIC_TAC_TOE_BOARD::check_column_win()
 bool TIC_TAC_TOE_BOARD::check_row_win()
 {
 
-	if (pegs[0 && 1 && 2] == "X" || pegs[3 && 4 && 5] == "X" || pegs[6 && 7 && 8] == "X")
+	//if (pegs[0 && 1 && 2] == "X" || pegs[3 && 4 && 5] == "X" || pegs[6 && 7 && 8] == "X")
 
-	//if (pegs[0] == pegs[1] && pegs[1] == pegs[2] && pegs[2] == pegs[3] 
-	//	&& pegs[0] == "X" || pegs[0] == "O" && pegs[1] == "X" || pegs[1] == "O" && pegs[2] == "X" || pegs[2] == "O")
+	if (pegs[0] == pegs[1] && pegs[1] == pegs[2] && pegs[2] == pegs[3] 
+		&& pegs[0] == "X" || pegs[0] == "O" && pegs[1] == "X" || pegs[1] == "O" && pegs[2] == "X" || pegs[2] == "O")
 	{
 		return true;
 	}
 
-	if (pegs[0 && 1 && 2] == "O" || pegs[3 && 4 && 5] == "O" || pegs[6 && 7 && 8] == "O")
+	//if (pegs[0 && 1 && 2] == "O" || pegs[3 && 4 && 5] == "O" || pegs[6 && 7 && 8] == "O")
 
-	//else if (pegs[3] == pegs[4] && pegs[4] == pegs[5] && pegs[5] == pegs[6] 
-	//	&& pegs[3] == "X" || pegs[3] == "O" && pegs[4] == "X" || pegs[4] == "O" && pegs[5] == "X" || pegs[5] == "O")
+	else if (pegs[3] == pegs[4] && pegs[4] == pegs[5] && pegs[5] == pegs[6] 
+		&& pegs[3] == "X" || pegs[3] == "O" && pegs[4] == "X" || pegs[4] == "O" && pegs[5] == "X" || pegs[5] == "O")
 	{
 		return true;
 	}
 
 
 	
-	//else if (pegs[6] == pegs[7] && pegs[7] == pegs[8] 
-	//	&& pegs[6] == "X" || pegs[6] == "O" && pegs[7] == "X" || pegs[7] == "O")
-	//{
-	//	return true;
-	//}
+	else if (pegs[6] == pegs[7] && pegs[7] == pegs[8] 
+		&& pegs[6] == "X" || pegs[6] == "O" && pegs[7] == "X" || pegs[7] == "O")
+	{
+		return true;
+	}
 	else
 	{
 		return false;
@@ -145,18 +148,18 @@ bool TIC_TAC_TOE_BOARD::check_row_win()
 
 bool TIC_TAC_TOE_BOARD::check_diagonal_win()
 {
-	if (pegs[0 && 4 && 8] == "X" || pegs[2 && 4 && 6] == "X")
+	//if (pegs[0 && 4 && 8] == "X" || pegs[2 && 4 && 6] == "X")
 
-	//if (pegs[0] == pegs[1] && pegs[4] == pegs[5] && pegs[8] == pegs[9] 
-	//	&& pegs[0] == "X" || pegs[0] == "O" && pegs[4] == "X" || pegs[4] == "O" && pegs[8] == "X" || pegs[8] == "O")
+	if (pegs[0] == pegs[1] && pegs[4] == pegs[5] && pegs[8] == pegs[9] 
+		&& pegs[0] == "X" || pegs[0] == "O" && pegs[4] == "X" || pegs[4] == "O" && pegs[8] == "X" || pegs[8] == "O")
 	{
 		return true;
 	}
 
-	if (pegs[0 && 4 && 8] == "O" || pegs[2 && 4 && 6] == "O")
+	//if (pegs[0 && 4 && 8] == "O" || pegs[2 && 4 && 6] == "O")
 
-	//else if (pegs[2] == pegs[4] && pegs[4] == pegs[5] && pegs[6] == pegs[7] 
-	//	&& pegs[2] == "X" || pegs[2] == "O" && pegs[4] == "X" || pegs[4] == "O" && pegs[6] == "X" || pegs[6] == "O")
+	else if (pegs[2] == pegs[4] && pegs[4] == pegs[5] && pegs[6] == pegs[7] 
+		&& pegs[2] == "X" || pegs[2] == "O" && pegs[4] == "X" || pegs[4] == "O" && pegs[6] == "X" || pegs[6] == "O")
 	{
 		return true;
 	}

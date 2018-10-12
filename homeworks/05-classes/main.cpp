@@ -38,6 +38,13 @@ int main()
 		//result += i;
 	}
 
+	//result += b i
+	//for( b : bords) - boards maybe types
+	//	while(b.game_over() = )
+	//		cin >> b
+	//cout result;
+
+
 	std::cout << a << std::endl;
 	//::cout << b << std::endl;
 	//std::cout << c << std::endl;
