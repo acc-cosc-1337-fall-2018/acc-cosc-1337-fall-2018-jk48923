@@ -77,17 +77,13 @@ void TIC_TAC_TOE_BOARD::set_next_player()
 		next_player = "X";
 }
 
-
 bool TIC_TAC_TOE_BOARD::check_column_win()
 {
 
 	//if (pegs[0 && 3 && 6] == "X" || pegs[1 && 4 && 7] == "X" || pegs[2 && 5 && 8] == "X")
 
 
-	//if (pegs[0] == pegs[1] && pegs[3] == pegs[4] && pegs[6] == pegs[7] 
-	//	&& pegs[0] == "X" || pegs[0] == "O" && pegs[3] == "X" || pegs[3] == "O" && pegs[6] == "X" || pegs[6] == "O")
-
-	if (pegs[0] == pegs[3] && pegs[3] == pegs[6] && pegs[6] == pegs[7]
+	if (pegs[0] == pegs[3] && pegs[3] == pegs[6]
 		&& pegs[0] == "X" || pegs[0] == "O" && pegs[3] == "X" || pegs[3] == "O" && pegs[6] == "X" || pegs[6] == "O")
 	{
 		return true;
@@ -95,14 +91,14 @@ bool TIC_TAC_TOE_BOARD::check_column_win()
 
 	//if (pegs[0 && 3 && 6] == "O" || pegs[1 && 4 && 7] == "O" || pegs[2 && 5 && 8] == "O")
 
-	else if (pegs[1] == pegs[2] && pegs[4] == pegs[5] && pegs[7] == pegs[8] 
+	else if (pegs[1] == pegs[4] && pegs[4] == pegs[7]
 		&& pegs[1] == "X" || pegs[1] == "O" && pegs[4] == "X" || pegs[4] == "O" && pegs[7] == "X" || pegs[7] == "O")
 	{
 		return true;
 	}
 
 
-	else if (pegs[2] == pegs[3] && pegs[5] == pegs[6] && pegs[8] == pegs[9] 
+	else if (pegs[2] == pegs[5] && pegs[5] == pegs[8]
 		&& pegs[2] == "X" || pegs[2] == "O" && pegs[5] == "X" || pegs[5] == "O" && pegs[8] == "X" || pegs[8] == "O")
 	{
 		return true;
@@ -118,7 +114,7 @@ bool TIC_TAC_TOE_BOARD::check_row_win()
 
 	//if (pegs[0 && 1 && 2] == "X" || pegs[3 && 4 && 5] == "X" || pegs[6 && 7 && 8] == "X")
 
-	if (pegs[0] == pegs[1] && pegs[1] == pegs[2] && pegs[2] == pegs[3] 
+	if (pegs[0] == pegs[1] && pegs[1] == pegs[2] && pegs[2] == pegs[3]
 		&& pegs[0] == "X" || pegs[0] == "O" && pegs[1] == "X" || pegs[1] == "O" && pegs[2] == "X" || pegs[2] == "O")
 	{
 		return true;
@@ -126,15 +122,13 @@ bool TIC_TAC_TOE_BOARD::check_row_win()
 
 	//if (pegs[0 && 1 && 2] == "O" || pegs[3 && 4 && 5] == "O" || pegs[6 && 7 && 8] == "O")
 
-	else if (pegs[3] == pegs[4] && pegs[4] == pegs[5] && pegs[5] == pegs[6] 
+	else if (pegs[3] == pegs[4] && pegs[4] == pegs[5]
 		&& pegs[3] == "X" || pegs[3] == "O" && pegs[4] == "X" || pegs[4] == "O" && pegs[5] == "X" || pegs[5] == "O")
 	{
 		return true;
 	}
 
-
-	
-	else if (pegs[6] == pegs[7] && pegs[7] == pegs[8] 
+	else if (pegs[6] == pegs[7] && pegs[7] == pegs[8]
 		&& pegs[6] == "X" || pegs[6] == "O" && pegs[7] == "X" || pegs[7] == "O")
 	{
 		return true;
@@ -150,15 +144,16 @@ bool TIC_TAC_TOE_BOARD::check_diagonal_win()
 {
 	//if (pegs[0 && 4 && 8] == "X" || pegs[2 && 4 && 6] == "X")
 
-	if (pegs[0] == pegs[1] && pegs[4] == pegs[5] && pegs[8] == pegs[9] 
+	if (pegs[0] == pegs[4] && pegs[4] == pegs[8]
 		&& pegs[0] == "X" || pegs[0] == "O" && pegs[4] == "X" || pegs[4] == "O" && pegs[8] == "X" || pegs[8] == "O")
+
 	{
 		return true;
 	}
 
 	//if (pegs[0 && 4 && 8] == "O" || pegs[2 && 4 && 6] == "O")
 
-	else if (pegs[2] == pegs[4] && pegs[4] == pegs[5] && pegs[6] == pegs[7] 
+	else if (pegs[2] == pegs[4] && pegs[4] == pegs[6]
 		&& pegs[2] == "X" || pegs[2] == "O" && pegs[4] == "X" || pegs[4] == "O" && pegs[6] == "X" || pegs[6] == "O")
 	{
 		return true;
@@ -177,9 +172,12 @@ void TIC_TAC_TOE_BOARD::clear_board()
 bool TIC_TAC_TOE_BOARD::check_board_full()
 {
 	for (int i = 0; i < pegs.size(); i++)
-		cout << pegs[i] << " ";
+	{
+		//cout << pegs[i] << " ";
+	}
 
 	return 0;
+
 }
 
 // Overload + to add the private data members x_win, o_win, and c_win
@@ -200,10 +198,19 @@ TIC_TAC_TOE_BOARD operator+(const TIC_TAC_TOE_BOARD & b, const TIC_TAC_TOE_BOARD
 // Capture the position from the keyboard
 std::istream & operator>>(std::istream & in, TIC_TAC_TOE_BOARD & POINTER)
 {
+	int position;
 
-	cout << "Enter the position: ";
-	
-	in >> POINTER.x_win >> POINTER.o_win;
+	cout << "Enter a position (1-9) for " << POINTER.get_player() << ": ";
+
+	in >> position; 
+
+	if (position >= 1 && position <= 9)
+	{
+		POINTER.mark_board(position);
+	}
+	else
+		cout << "You must enter a position between (1-9)!" << endl;
+
 
 	return in;
 }
@@ -212,55 +219,11 @@ std::istream & operator>>(std::istream & in, TIC_TAC_TOE_BOARD & POINTER)
 std::ostream & operator<<(std::ostream & out, const TIC_TAC_TOE_BOARD & POINTER)
 {
 
-	TIC_TAC_TOE_BOARD TIC_TAC_TOE_PLAY;
+	out << endl;
+	out << "      " << '[' << POINTER.pegs[0] << ']' << '[' << POINTER.pegs[1] << ']' << '[' << POINTER.pegs[2] << ']' << endl;
+	out << "      " << '[' << POINTER.pegs[3] << ']' << '[' << POINTER.pegs[4] << ']' << '[' << POINTER.pegs[5] << ']' << endl;
+	out << "      " << '[' << POINTER.pegs[6] << ']' << '[' << POINTER.pegs[7] << ']' << '[' << POINTER.pegs[8] << ']' << endl;
+	out << endl;
 
-	TIC_TAC_TOE_PLAY.start_game("X");
-
-	TIC_TAC_TOE_PLAY.start_game("O");
-
-	string choice;
-	int position;
-
-	while (true)
-	{
-
-		out << "Play Tic Tac Toe?" << endl;
-		out << endl;
-		out << "Choice x = Player X" << endl;
-		out << "Choice o = Player O" << endl;
-		out << endl;
-		out << "Enter your choice: ";
-		std::cin >> choice;
-
-		if (choice == "X" || choice == "O" || choice == "x" || choice == "o")
-		{
-
-			//out << "(" << POINTER.x_win << "," << POINTER.o_win << ")";
-
-			//out << "(" << TIC_TAC_TOE_BOARD.OSTREAM_POINTER.x_win << "," << OSTREAM_POINTER.o_win() << ")";
-
-
-
-			while (!TIC_TAC_TOE_PLAY.game_over())
-			{
-
-				out << "Enter position for " << TIC_TAC_TOE_PLAY.get_player() << ": ";
-
-				//OSTREAM_POINTER.x_win
-
-				std::cin >> position;
-				TIC_TAC_TOE_PLAY.mark_board(position);
-
-
-			}
-
-			out << "Player " << TIC_TAC_TOE_PLAY.get_player() << " is the winner!";
-			
-		}
-		else
-
-		out << "Please enter X or O!";
-
-		return out;
-	}
+	return out;
 }
