@@ -19,7 +19,7 @@ int main()
 
 	while (true)
 	{
-
+		cout << endl;
 		cout << "Play Tic Tac Toe?" << endl;
 		cout << endl;
 		cout << "Choice x = Player X" << endl;
@@ -27,6 +27,7 @@ int main()
 		cout << endl;
 		cout << "Enter your choice: ";
 		cin >> choice;
+		cout << endl;
 
 		if (choice == "X" || choice == "O" || choice == "x" || choice == "o")
 		{
@@ -54,8 +55,8 @@ int main()
 
 		else
 			cout << "Please enter X or O!";
+			cout << endl;
 
-		return false;
 	
 	}
 

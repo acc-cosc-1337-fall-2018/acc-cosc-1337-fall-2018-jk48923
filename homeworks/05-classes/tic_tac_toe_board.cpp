@@ -13,15 +13,15 @@ bool TIC_TAC_TOE_BOARD::game_over()
 	{
 		if (next_player == "X")
 		{
-			x_win = +1;
+			x_win = + 1;
 		}
 		else if (next_player == "O")
 		{
-			o_win = +1;
+			o_win = + 1;
 		}
 		else if (next_player != "X" || "O")
 		{
-			c_win = +1;
+			c_win = + 1;
 		}
 
 		return true;
@@ -196,17 +196,17 @@ TIC_TAC_TOE_BOARD operator+(const TIC_TAC_TOE_BOARD & b, const TIC_TAC_TOE_BOARD
 }
 
 // Capture the position from the keyboard
-std::istream & operator>>(std::istream & in, TIC_TAC_TOE_BOARD & POINTER)
+std::istream & operator>>(std::istream & in, TIC_TAC_TOE_BOARD & POINTER_I)
 {
 	int position;
 
-	cout << "Enter a position (1-9) for " << POINTER.get_player() << ": ";
+	cout << "Enter a position (1-9) for " << POINTER_I.get_player() << ": ";
 
 	in >> position; 
 
 	if (position >= 1 && position <= 9)
 	{
-		POINTER.mark_board(position);
+		POINTER_I.mark_board(position);
 	}
 	else
 		cout << "You must enter a position between (1-9)!" << endl;
@@ -216,13 +216,13 @@ std::istream & operator>>(std::istream & in, TIC_TAC_TOE_BOARD & POINTER)
 }
 
 // Display the board to the screen with current user choices followed by the current score of x, o, and c.
-std::ostream & operator<<(std::ostream & out, const TIC_TAC_TOE_BOARD & POINTER)
+std::ostream & operator<<(std::ostream & out, const TIC_TAC_TOE_BOARD & POINTER_O)
 {
 
 	out << endl;
-	out << "      " << '[' << POINTER.pegs[0] << ']' << '[' << POINTER.pegs[1] << ']' << '[' << POINTER.pegs[2] << ']' << endl;
-	out << "      " << '[' << POINTER.pegs[3] << ']' << '[' << POINTER.pegs[4] << ']' << '[' << POINTER.pegs[5] << ']' << endl;
-	out << "      " << '[' << POINTER.pegs[6] << ']' << '[' << POINTER.pegs[7] << ']' << '[' << POINTER.pegs[8] << ']' << endl;
+	out << "      " << '[' << POINTER_O.pegs[0] << ']' << '[' << POINTER_O.pegs[1] << ']' << '[' << POINTER_O.pegs[2] << ']' << endl;
+	out << "      " << '[' << POINTER_O.pegs[3] << ']' << '[' << POINTER_O.pegs[4] << ']' << '[' << POINTER_O.pegs[5] << ']' << endl;
+	out << "      " << '[' << POINTER_O.pegs[6] << ']' << '[' << POINTER_O.pegs[7] << ']' << '[' << POINTER_O.pegs[8] << ']' << endl;
 	out << endl;
 
 	return out;
