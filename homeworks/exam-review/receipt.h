@@ -11,6 +11,7 @@ public:
 	Receipt() = default;
 	Receipt(int b, double t, double tx) : bill(b), tip(t), tax(tx) {}
 	double get_extended_cost();
+	double get_total() const;
 
 	friend Receipt operator+(const Receipt & b, const Receipt & b2);
 

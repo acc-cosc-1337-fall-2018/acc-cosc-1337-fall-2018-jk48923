@@ -23,6 +23,13 @@ vector<int> get_dna_count()
 	//int g = 0;
 	//int t = 0;
 
+	//vector<int> dna{ 0, 0, 0, 0 };
+
+	//int a = 0;
+	//int c = 0;
+	//int g = 0;
+	//int t = 0;
+
 
 	for (int i = 0; i < s.length(); i++) 
 	{

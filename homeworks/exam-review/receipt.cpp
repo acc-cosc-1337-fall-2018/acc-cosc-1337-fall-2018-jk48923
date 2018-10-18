@@ -5,22 +5,13 @@
 
 using std::endl; using std::cout;
 
-//void subTotal()
-//{
-//
-//	return total;
-//
-//}
 
 //void calculate_tax()
 //{
 //	tax = total * TaxRate;
 //}
 
-//void totalprice()
-//{
-//	total = tax + subtotal;
-//}
+
 
 // d-Overload the += operator to add bill amount, tip amount, tax amount, and total amount.
 Receipt operator+(const Receipt & b, const Receipt & b2)
@@ -84,4 +75,9 @@ double Receipt::get_extended_cost()
 	compute_result = bill + tip + tax;
 
 	return compute_result;
+}
+
+double Receipt::get_total() const
+{
+	return total;
 }
