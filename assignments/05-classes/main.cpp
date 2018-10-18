@@ -4,87 +4,110 @@
 #include "invoice.h"
 #include<iostream>
 #include<vector>
+#include<memory> // smart pointer
 
+
+
+//int main()
+//{
+//
+//	InvoiceUtility invu(25);
+//	invu.add_invoice_detail(InvoiceDetail(100, 1));
+//
+//	InvoiceProgress invp(250);
+//	invp.add_invoice_detail(InvoiceDetail(100, 1));
+//
+//	std::cout << invu.get_total() << std::endl;
+//
+//	std::cout << invp.get_total() << std::endl;
+//
+//	invu.get_total();
+//	invp.get_total();
+//
+//	Invoice& u = invu;
+//	Invoice& p = invp;
+//
+//	u.get_total();
+//	p.get_total();
+//
+//	std::cout << u.get_total() << std::endl;
+//
+//	std::cout << p.get_total() << std::endl;
+//
+//	return 0;
+//
+//}
+
+
+class Shape
+{
+public:
+	virtual void draw() {}
+};
+
+class Line : public Shape
+{
+public:
+	void draw() { std::cout << "Line"; }
+};
+
+class Circle : public Shape
+{
+
+public:
+	void draw() { std::cout << "Cirle"; }
+};
 
 
 int main()
 {
 
-	InvoiceUtility invu(25);
-	invu.add_invoice_detail(InvoiceDetail(100, 1));
+	// smart pointer
+	std::unique_ptr<Shape> line = std::make_unique<Line>();
+	line->draw();
 
-	InvoiceProgress invp(250);
-	invp.add_invoice_detail(InvoiceDetail(100, 1));
+	std::vector<std::unique_ptr<Shape>> shapes;
+	shapes.push_back(std::make_unique<Line>());
+	shapes.push_back(std::make_unique<Circle>());
 
-	std::cout << invu.get_total() << std::endl;
+	for (auto& shape : shapes)
+	{
+		shape.get()->draw();
+	}
 
-	std::cout << invp.get_total() << std::endl;
 
-	invu.get_total();
-	invp.get_total();
+	// Standard pointer
+	//std::vector<Shape*> shapes{new Line(), new Circle()};
 
-	Invoice& u = invu;
-	Invoice& p = invp;
+	//for (auto shape : shapes)
+	//{
+	//	shape->draw(); // arrow is howto access dynamic * memory
+	//}
 
-	u.get_total();
-	p.get_total();
+	//Line line;
+	//Circle c;
+	//shapes.push_back(line);
+	//shapes.push_back(c);
 
-	std::cout << u.get_total() << std::endl;
+	//for (auto w_r_shape : shapes)
+	//{
+	//	w_r_shape.get().draw();
+	//}
 
-	std::cout << p.get_total() << std::endl;
+
+	//line.draw();
+	//Shape& shape = line;
+	//shape.draw();
+
+	//Circle c;
+
+	//c.draw();
+	//Shape& shape_c = c;
+	//shape_c.draw();
 
 	return 0;
 
 }
-//#include <vector>
-//
-//class Shape
-//{
-//public:
-//	virtual void draw() {}
-//};
-//
-//class Line : public Shape
-//{
-//public:
-//	void draw() { std::cout << "Line"; }
-//};
-//
-//class Circle : public Shape
-//{
-//
-//public:
-//	void draw() { std::cout << "Cirle"; }
-//};
-//
-//
-//int main()
-//{
-//	std::vector<std::reference_wrapper<Shape>> shapes;
-//	Line line;
-//	Circle c;
-//	shapes.push_back(line);
-//	shapes.push_back(c);
-//
-//	for (auto w_r_shape : shapes)
-//	{
-//		w_r_shape.get().draw();
-//	}
-//
-//
-//	//line.draw();
-//	//Shape& shape = line;
-//	//shape.draw();
-//
-//	//Circle c;
-//
-//	//c.draw();
-//	//Shape& shape_c = c;
-//	//shape_c.draw();
-//
-//	return 0;
-//
-//}
 
 
 

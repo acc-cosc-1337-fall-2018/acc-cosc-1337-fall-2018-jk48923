@@ -2,6 +2,7 @@
 #define INVOICE_H
 #include "invoice_detail.h"
 #include<vector>
+#include<iostream>
 
 using std::vector;
 
