@@ -4,6 +4,6 @@
 
 using std::vector;
 
-vector<int> get_dna_count();
+vector<int> get_dna_count(string dna);
 
 #endif //DNA_H
