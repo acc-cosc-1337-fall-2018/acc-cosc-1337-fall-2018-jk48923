@@ -16,49 +16,45 @@ int main()
 	vector<TIC_TAC_TOE_BOARD> types{ a, b, c };
 
 	string choice;
+	string current_player;
+	string play_again = "1";
 
-	while (true)
+	for (auto b : types)
 	{
 		cout << endl;
 		cout << "Play Tic Tac Toe?" << endl;
 		cout << endl;
-		cout << "Choice x = Player X" << endl;
-		cout << "Choice o = Player O" << endl;
+		cout << "Choice X = Player X" << endl;
+		cout << "Choice O = Player O" << endl;
 		cout << endl;
 		cout << "Enter your choice: ";
 		cin >> choice;
 		cout << endl;
 
-		if (choice == "X" || choice == "O" || choice == "x" || choice == "o")
+		if (choice == "X" || choice == "O")
 		{
+			b.start_game(choice);
 
-			for (auto b : types)
+			while (b.game_over() == false)
 			{
-				while (b.game_over() == false)
-				{
-					//b.start_game("X");
-					//b.start_game("O");
+				current_player = b.get_player();
 
-					cin >> b;
+				cin >> b;
 
-					result = result + b;
+				result = result + b;
 
-					cout << b << endl;
-				}
-
+				cout << b << endl;
 			}
 
-			cout << endl;
-			cout << "Player " << b.get_player() << " is the winner!" << endl;
-			cout << endl;
 		}
 
-		else
-			cout << "Please enter X or O!";
-			cout << endl;
+	cout << endl;
+	cout << "Player " << current_player << " is the winner!" << endl;
+	cout << endl;
 
-	
 	}
+	
+	cout << result;
 
 	return 0;
 }
