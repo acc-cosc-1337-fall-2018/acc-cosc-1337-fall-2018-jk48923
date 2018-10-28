@@ -75,8 +75,8 @@ TEST_CASE("Test win by third column", "[X wins third column]")
 	TIC_TAC_TOE_BOARD third_column;
 
 	third_column.start_game("X");
+	third_column.mark_board(3); // x
 	third_column.mark_board(1); // O
-	third_column.mark_board(3); // X
 	third_column.mark_board(6); // X
 	third_column.mark_board(7); // O
 	third_column.mark_board(9); // X
@@ -111,11 +111,11 @@ TEST_CASE("Test win by second row", "[X wins second row]")
 	TIC_TAC_TOE_BOARD second_row;
 
 	second_row.start_game("X");
-	second_row.mark_board(2); // O
 	second_row.mark_board(4); // X
+	second_row.mark_board(2); // O
 	second_row.mark_board(5); // X
-	second_row.mark_board(6); // X
 	second_row.mark_board(9); // O
+	second_row.mark_board(6); // X
 
 	REQUIRE(second_row.game_over() == true);
 
@@ -129,10 +129,10 @@ TEST_CASE("Test win by third row", "[X wins third row]")
 	TIC_TAC_TOE_BOARD third_row;
 
 	third_row.start_game("X");
-	third_row.mark_board(2); // O
-	third_row.mark_board(4); // O
 	third_row.mark_board(7); // X
+	third_row.mark_board(4); // O
 	third_row.mark_board(8); // X
+	third_row.mark_board(6); // O
 	third_row.mark_board(9); // X
 
 	REQUIRE(third_row.game_over() == true);
