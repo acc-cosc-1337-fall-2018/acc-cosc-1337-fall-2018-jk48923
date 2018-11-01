@@ -41,18 +41,10 @@ protected:
 	virtual bool check_diagonal_win() const = 0;
 	virtual bool check_row_win() const = 0;
 
-	//virtual void display_board(std::ostream& out) const = 0;
-	//virtual void get_input(std::istream& in) = 0;
-
 	void set_next_player();
 	void clear_board();
 	vector<Peg> pegs;
 	string next_player;
-
-
-
-
-
 
 };
 

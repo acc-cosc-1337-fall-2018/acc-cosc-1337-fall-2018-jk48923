@@ -23,16 +23,6 @@ void TIC_TAC_TOE_4::display_board(std::ostream& out) const
 	}
 	out << x_win << o_win << c_win << std::endl;
 
-
-
-	out << endl;
-	out << "      " << '[' << pegs[0].val << ']' << '[' << pegs[1].val << ']' << '[' << pegs[2].val << ']' << endl;
-	out << "      " << '[' << pegs[3].val << ']' << '[' << pegs[4].val << ']' << '[' << pegs[5].val << ']' << endl;
-	out << "      " << '[' << pegs[6].val << ']' << '[' << pegs[7].val << ']' << '[' << pegs[8].val << ']' << endl;
-	out << endl;
-
-
-
 }
 
 void TIC_TAC_TOE_4::get_input(std::istream & in)

@@ -186,8 +186,6 @@ TEST_CASE("Test for no winner board 3")
 	TIC_TAC_TOE_3 no_winner;
 
 	no_winner.start_game("X");
-
-	//no_winner.mark_board(0); // O
 	no_winner.mark_board(1); // X
 	no_winner.mark_board(2); // O
 	no_winner.mark_board(3); // O 
@@ -239,13 +237,6 @@ TEST_CASE("Test win by first column board 4", "[X wins first column]")
 	TIC_TAC_TOE_4 first_column;
 
 	first_column.start_game("X");
-	//first_column.mark_board(1); // X
-	//first_column.mark_board(2); // O
-	//first_column.mark_board(4); // X
-	//first_column.mark_board(5); // O
-	//first_column.mark_board(7); // X
-
-
 	first_column.mark_board(1); // X
 	first_column.mark_board(2); // O
 	first_column.mark_board(5); // X
@@ -413,20 +404,6 @@ TEST_CASE("Test win diagonally from bottom left board 4")
 	TIC_TAC_TOE_4 diag_bottom_left;
 
 	diag_bottom_left.start_game("X");
-	//diag_bottom_left.mark_board(7); // X
-	//diag_bottom_left.mark_board(2); // O
-	//diag_bottom_left.mark_board(5); // X
-	//diag_bottom_left.mark_board(6); // O
-	//diag_bottom_left.mark_board(3); // X
-
-	//diag_bottom_left.mark_board(4); // X
-	//diag_bottom_left.mark_board(2); // O
-	//diag_bottom_left.mark_board(7); // X
-	//diag_bottom_left.mark_board(8); // O
-	//diag_bottom_left.mark_board(10); // X
-	//diag_bottom_left.mark_board(9); // X
-	//diag_bottom_left.mark_board(13); // X
-
 	diag_bottom_left.mark_board(4); // X
 	diag_bottom_left.mark_board(8); // O
 	diag_bottom_left.mark_board(7); // X
@@ -446,8 +423,6 @@ TEST_CASE("Test for no winner board 4")
 	TIC_TAC_TOE_4 no_winner;
 
 	no_winner.start_game("X");
-
-	//no_winner.mark_board(0); // O
 	no_winner.mark_board(1); // X
 	no_winner.mark_board(2); // O
 	no_winner.mark_board(3); // O 
