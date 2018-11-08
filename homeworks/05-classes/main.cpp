@@ -6,6 +6,7 @@
 #include<iostream>
 #include<string>
 #include<memory>
+#include<vector>
 
 using std::cout; using std::cin; 
 using std::endl; using std::vector;
@@ -23,7 +24,7 @@ int main()
 	TIC_TAC_TOE_MANAGER controller;
 
 	//Prompt user for Game Type using enum as variable(0 = tic tac toe 3 and 1 = tic tac toe 4)
-	string board_choice;
+	int board_choice;
 
 	cout << endl;
 	cout << "Play Tic Tac Toe?" << endl;
@@ -35,6 +36,18 @@ int main()
 	cin >> board_choice;
 	cout << endl;
 
+	//if (board_choice = 0)
+	//{
+
+	//	controller.get_game(GameType);
+	//	//auto c = controller.get_game(tic_tac_toe_3);
+	//	//c->get_choice_type();
+	//}
+	//else if (board_choice = 1)
+	//{
+	//	auto d = controller.get_game(tic_tac_toe_4);
+	//	d->get_choice_type_2();
+	//}
 
 	//Get an instance of TicTacToeBoard concrete class by calling the
 	//get_game function and passing the GameType value to the function(0 or 1)
@@ -42,31 +55,31 @@ int main()
 	class Concrete_1 : public TIC_TAC_TOE_BOARD
 	{
 	public:
-		void get_choice_type();
+		void make_noise();
 	};
 
-	void Concrete_1::get_choice_type()
+	void Concrete_1::make_noise()
 	{
-		get_choice_type(GameType);
+		get_game(GameType);
 	}
 
 	class Concrete_2 : public TIC_TAC_TOE_BOARD
 	{
 	public:
-		void get_choice_type_2();
+		void make_noise();
 	};
 
-	void Concrete_2::get_choice_type_2()
+	void Concrete_2::make_noise()
 	{
-		get_choice_type_2(GameType);
+		get_game(GameType);
 	}
 
 
-	auto c = controller.get_game(Concrete_1);
-	c->get_choice_type();
+	auto c = controller.get_game(tic_tac_toe_3);
+	c->make_noise();
 
-	auto d = controller.get_game(Concrete_2);
-	d->get_choice_type_2();
+	auto d = controller.get_game(tic_tac_toe_4);
+	d->make_noise();
 
 
 

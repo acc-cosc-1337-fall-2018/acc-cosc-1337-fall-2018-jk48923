@@ -1,22 +1,29 @@
 #include "tic_tac_toe_manager.h"
+#include "tic_tac_toe_board.h"
+#include "tic_tac_toe_3.h"
+#include "tic_tac_toe_4.h"
 #include<memory>
+#include<vector>
+#include<string>
+#include<iostream>
+
 
 std::unique_ptr<TIC_TAC_TOE_BOARD> TIC_TAC_TOE_MANAGER::get_game(GameType board_type)
 {
 	std::unique_ptr<TIC_TAC_TOE_BOARD> a;
-	if (board_type == 0)
+	if (board_type == tic_tac_toe_3)
 	{
-		a = std::make_unique<tic_tac_toe_3>();
+		a = std::make_unique<TIC_TAC_TOE_3>();
 	}
-	else if (board_type == 1)
+	else if (board_type == tic_tac_toe_4)
 	{
-		a = std::make_unique<tic_tac_toe_4>();
+		a = std::make_unique<TIC_TAC_TOE_4>();
 	}
 
 	return a;
 }
 
-void TIC_TAC_TOE_MANAGER::save_game(std::unique_ptr<TIC_TAC_TOE_BOARD> boards)
+void TIC_TAC_TOE_MANAGER::save_game(std::unique_ptr<TIC_TAC_TOE_BOARD> board)
 {
 }
 
@@ -41,4 +48,11 @@ std::ostream & operator<<(std::ostream & out, TIC_TAC_TOE_MANAGER & POINTER)
 	//a) iterate the vector of tic_tac_toe_boards and output the board using the overloaded istream operator from TicTacToeBoard
 	//b) to display the total of o_win, c_win, and x_win.
 
+	int iterate;
+
+	for (unsigned i = 0; i < boards.size(); i++) {
+		iterate += boards[i];
+	}
+
+	return out;
 }
