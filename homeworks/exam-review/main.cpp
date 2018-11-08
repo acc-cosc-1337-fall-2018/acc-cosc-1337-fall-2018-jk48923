@@ -55,7 +55,7 @@ int main()
 
 	//vector_of_ints();
 
-	//get_dna_count();
+	get_dna_count();
 
 
 

@@ -15,10 +15,11 @@ public:
 
 	TIC_TAC_TOE_BOARD() = default;
 
-	TIC_TAC_TOE_BOARD(int x, int o, int c) : x_win(x), o_win(o), c_win(c) {}
+	TIC_TAC_TOE_BOARD(int x, int o, int c) {}
 
 	bool game_over();
 	string get_player();
+	string get_winner();
 	void start_game(string player);
 	void mark_board(int position);
 
@@ -31,10 +32,6 @@ public:
 
 
 protected:
-
-	int x_win{ 0 };
-	int o_win{ 0 };
-	int c_win{ 0 };
 
 	virtual bool check_board_full() const;
 	virtual bool check_column_win() const = 0;

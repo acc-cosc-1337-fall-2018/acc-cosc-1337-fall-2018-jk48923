@@ -55,6 +55,11 @@ string TIC_TAC_TOE_BOARD::get_player()
 	return next_player;
 }
 
+string TIC_TAC_TOE_BOARD::get_winner()
+{
+	return get_winner();
+}
+
 
 void TIC_TAC_TOE_BOARD::set_next_player()
 {
