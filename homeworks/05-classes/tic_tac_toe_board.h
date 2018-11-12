@@ -42,6 +42,7 @@ protected:
 	void clear_board();
 	vector<Peg> pegs;
 	string next_player;
+	string winner;
 
 };
 

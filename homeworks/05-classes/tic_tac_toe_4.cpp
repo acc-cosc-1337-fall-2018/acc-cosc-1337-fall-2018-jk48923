@@ -1,6 +1,4 @@
 #include "tic_tac_toe_4.h"
-#include "tic_tac_toe_board.h"
-#include "peg.h"
 #include<iostream>
 
 using std::cout; using std::endl;
@@ -21,8 +19,6 @@ void TIC_TAC_TOE_4::display_board(std::ostream& out) const
 	{
 		out << pegs[i].val << "|" << pegs[i + 1].val << "|" << pegs[i + 2].val << std::endl;
 	}
-	//out << x_win << o_win << c_win << std::endl;
-
 }
 
 void TIC_TAC_TOE_4::get_input(std::istream & in)
@@ -33,10 +29,11 @@ void TIC_TAC_TOE_4::get_input(std::istream & in)
 	{
 		cout << "enter a position (1-9) for" << get_player() << ": ";
 		in >> position;
+		mark_board(position);
 	}
 
 
-	mark_board(position);
+	//mark_board(position);
 }
 
 

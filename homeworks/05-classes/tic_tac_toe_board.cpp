@@ -1,8 +1,4 @@
 #include "tic_tac_toe_board.h"
-#include "tic_tac_toe_manager.h"
-#include "tic_tac_toe_3.h"
-#include "tic_tac_toe_4.h"
-#include "peg.h"
 #include<iostream>
 #include<string>
 #include<vector>
@@ -15,25 +11,12 @@ bool TIC_TAC_TOE_BOARD::game_over()
 {
 	if (check_column_win() == true || check_row_win() == true || check_diagonal_win() == true || check_board_full() == true)
 	{
-		//if (next_player == "X")
-		//{
-		//	x_win = + 1;
-		//}
-		//else if (next_player == "O")
-		//{
-		//	o_win = + 1;
-		//}
-		//else if (next_player != "X" || "O")
-		//{
-		//	c_win = + 1;
-		//}
-
 		return true;
-
 	}
 	else
 		return false;
 }
+
 
 void TIC_TAC_TOE_BOARD::start_game(string player)
 {
@@ -43,8 +26,6 @@ void TIC_TAC_TOE_BOARD::start_game(string player)
 
 void TIC_TAC_TOE_BOARD::mark_board(int position)
 {
-	// Mark pegs vector position with value of next_player 
-	// variable and call set_next_player private function
 
 	pegs[position -= 1].val = next_player;
 
@@ -59,7 +40,7 @@ string TIC_TAC_TOE_BOARD::get_player()
 
 string TIC_TAC_TOE_BOARD::get_winner()
 {
-	return get_winner();
+	return winner;
 }
 
 
