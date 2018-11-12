@@ -7,12 +7,13 @@
 #include <iostream>
 #include<memory>
 
+enum GameType { tic_tac_toe_3, tic_tac_toe_4 };
+
 class TIC_TAC_TOE_MANAGER
 {
 
 public:
 
-	enum GameType { tic_tac_toe_3, tic_tac_toe_4};
 	std::unique_ptr<TIC_TAC_TOE_BOARD> get_game(GameType board_type);
 	void save_game(std::unique_ptr<TIC_TAC_TOE_BOARD> board);
 	friend std::ostream & operator<<(std::ostream & out, TIC_TAC_TOE_MANAGER & POINTER);

@@ -13,7 +13,6 @@ using std::endl; using std::vector;
 
 int main()
 {
-
 	//Create an instance of TicTacToeManager
 	//Prompt user for Game Type using enum as variable(0 = tic tac toe 3 and 1 = tic tac toe 4)
 	//Get an instance of TicTacToeBoard concrete class by calling the get_game function and passing the GameType value to the function(0 or 1)
@@ -30,56 +29,34 @@ int main()
 	cout << "Play Tic Tac Toe?" << endl;
 	cout << endl;
 	cout << "Choice 0 = TicTacToe3 (connect 3 in a row to win)" << endl;
-	cout << "Choice 1 = TicTacToe4 (connect 3 in a row to win)" << endl;
+	cout << "Choice 1 = TicTacToe4 (connect 4 in a row to win)" << endl;
 	cout << endl;
 	cout << "Enter your choice: ";
 	cin >> board_choice;
 	cout << endl;
 
+	//controller.get_game(board_choice);
+
 	//if (board_choice = 0)
 	//{
-
 	//	controller.get_game(GameType);
 	//	//auto c = controller.get_game(tic_tac_toe_3);
 	//	//c->get_choice_type();
 	//}
 	//else if (board_choice = 1)
 	//{
+	//	controller.get_game(GameType);
 	//	auto d = controller.get_game(tic_tac_toe_4);
-	//	d->get_choice_type_2();
+
 	//}
 
-	//Get an instance of TicTacToeBoard concrete class by calling the
-	//get_game function and passing the GameType value to the function(0 or 1)
-
-	class Concrete_1 : public TIC_TAC_TOE_BOARD
-	{
-	public:
-		void make_noise();
-	};
-
-	void Concrete_1::make_noise()
-	{
-		get_game(GameType);
-	}
-
-	class Concrete_2 : public TIC_TAC_TOE_BOARD
-	{
-	public:
-		void make_noise();
-	};
-
-	void Concrete_2::make_noise()
-	{
-		get_game(GameType);
-	}
 
 
-	auto c = controller.get_game(tic_tac_toe_3);
-	c->make_noise();
+	//auto c = controller.get_game(tic_tac_toe_3);
+	//c->make_noise();
 
-	auto d = controller.get_game(tic_tac_toe_4);
-	d->make_noise();
+	//auto d = controller.get_game(tic_tac_toe_4);
+	//d->make_noise();
 
 
 

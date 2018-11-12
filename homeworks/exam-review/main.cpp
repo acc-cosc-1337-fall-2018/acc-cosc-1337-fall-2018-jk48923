@@ -53,9 +53,11 @@ int main()
 
 	//cout << value_reverse << endl;
 
-	//vector_of_ints();
+	//vector<int> grades;
 
-	get_dna_count();
+	//vector_of_ints(grades);
+
+	//get_dna_count();
 
 
 

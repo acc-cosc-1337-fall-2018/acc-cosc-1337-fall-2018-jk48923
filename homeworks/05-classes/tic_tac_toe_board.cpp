@@ -15,18 +15,18 @@ bool TIC_TAC_TOE_BOARD::game_over()
 {
 	if (check_column_win() == true || check_row_win() == true || check_diagonal_win() == true || check_board_full() == true)
 	{
-		if (next_player == "X")
-		{
-			x_win = + 1;
-		}
-		else if (next_player == "O")
-		{
-			o_win = + 1;
-		}
-		else if (next_player != "X" || "O")
-		{
-			c_win = + 1;
-		}
+		//if (next_player == "X")
+		//{
+		//	x_win = + 1;
+		//}
+		//else if (next_player == "O")
+		//{
+		//	o_win = + 1;
+		//}
+		//else if (next_player != "X" || "O")
+		//{
+		//	c_win = + 1;
+		//}
 
 		return true;
 
