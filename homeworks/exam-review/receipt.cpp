@@ -13,36 +13,26 @@ using std::endl; using std::cout;
 
 
 
-// d-Overload the += operator to add bill amount, tip amount, tax amount, and total amount.
-Receipt operator+(const Receipt & b, const Receipt & b2)
+Receipt Receipt::operator+=(const Receipt & b)
 {
 	Receipt receipt;
 
-	receipt.bill = b.bill + b2.bill;
-
-	receipt.tip = b.tip + b2.tip;
-
-	receipt.tax = b.tax + b2.tax;
-
-	receipt.total = b.total + b2.total;
+	bill += b.bill;
+	tax += b.tax;
+	tip += b.tip;
 
 	return receipt;
 }
 
-//b-Overwrite insertion << operator to output the following:
-//Bill Amount : 10.00
-//Tip Amount : 2.00
-//Tax Amount : 1.00
-//Total Amount : 13.00
 
 std::ostream & operator<<(std::ostream & out, const Receipt & POINTER_O)
 {
 
 	out << endl;
-	out << "Bill Amount: " << POINTER_O.bill <<  endl;
-	out << "Tip Amount: " << POINTER_O.tip << endl;
-	out << "Tax Amount: " << POINTER_O.tax <<  endl;
-	out << "Total Amount: " << POINTER_O.total << endl;
+	out << "Bill Amount: $" << POINTER_O.bill <<  endl;
+	out << "Tip Amount: $" << POINTER_O.tip << endl;
+	out << "Tax Amount: $" << POINTER_O.tax <<  endl;
+	out << "Total Amount: $" << POINTER_O.total << endl;
 	out << endl;
 
 	return out;
@@ -51,11 +41,6 @@ std::ostream & operator<<(std::ostream & out, const Receipt & POINTER_O)
 //a-Overwrite extraction >> operator to capture the bill amount from keyboard.
 std::istream & operator>>(std::istream & in, Receipt & POINTER_I)
 {
-	//int output_amount;
-
-	//std::cout << "Enter the bill amount: ";
-
-	//in >> output_amount;
 
 	std::cout << "Enter bill amount: ";
 	in >> POINTER_I.bill;
@@ -68,7 +53,21 @@ std::istream & operator>>(std::istream & in, Receipt & POINTER_I)
 	return in;
 }
 
-double Receipt::get_extended_cost()
+//double Receipt::get_total()
+//{
+//	double compute_result;
+//
+//	compute_result = bill + tip + tax;
+//
+//	return compute_result;
+//}
+
+//double Receipt::get_total() const
+//{
+//	return total;
+//}
+
+double Receipt::get_total() const
 {
 	double compute_result;
 
@@ -77,7 +76,3 @@ double Receipt::get_extended_cost()
 	return compute_result;
 }
 
-double Receipt::get_total() const
-{
-	return total;
-}
