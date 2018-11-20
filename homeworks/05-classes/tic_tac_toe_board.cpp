@@ -33,6 +33,12 @@ void TIC_TAC_TOE_BOARD::mark_board(int position)
 
 }
 
+const vector<Peg>& TIC_TAC_TOE_BOARD::get_pegs()
+{
+	return pegs;
+}
+
+
 string TIC_TAC_TOE_BOARD::get_player()
 {
 	return next_player;

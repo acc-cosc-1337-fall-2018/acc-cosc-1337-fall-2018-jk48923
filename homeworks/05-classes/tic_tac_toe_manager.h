@@ -15,6 +15,7 @@ class TIC_TAC_TOE_MANAGER
 public:
 
 	std::unique_ptr<TIC_TAC_TOE_BOARD> get_game(GameType board_type);
+	const std::vector<std::unique_ptr<TIC_TAC_TOE_BOARD>>& get_games();
 	void save_game(std::unique_ptr<TIC_TAC_TOE_BOARD> board);
 	friend std::ostream & operator<<(std::ostream & out, TIC_TAC_TOE_MANAGER & POINTER);
 

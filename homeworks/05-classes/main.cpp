@@ -33,16 +33,15 @@ int main()
 		cin >> board_choice;
 		cout << endl;
 
+		std::unique_ptr<TIC_TAC_TOE_BOARD> game;
 
-		//std::unique_ptr<TIC_TAC_TOE_BOARD> board;
-
-		if (board_choice = 0)
+		if (board_choice == 0)
 		{
-			auto a = controller.get_game(tic_tac_toe_3);
+			game = controller.get_game(tic_tac_toe_3);
 		}
-		else if (board_choice = 1)
+		else if (board_choice == 1)
 		{
-			auto a = controller.get_game(tic_tac_toe_4);
+			game = controller.get_game(tic_tac_toe_4);
 		}
 
 		string choice;
@@ -59,9 +58,12 @@ int main()
 
 		if (choice == "X" || choice == "O" || choice == "x" || choice == "o")
 		{
-			std::unique_ptr<TIC_TAC_TOE_BOARD> board;
 
-			board->start_game(choice);
+			while (game->game_over() == false)
+			{
+				game->start_game(choice);
+			}
+		
 		}
 
 	} while (enable = 1);

@@ -22,6 +22,7 @@ public:
 	string get_winner();
 	void start_game(string player);
 	void mark_board(int position);
+	const vector<Peg>& get_pegs();
 
 
 	friend std::ostream & operator<<(std::ostream & out, TIC_TAC_TOE_BOARD & POINTER_O);

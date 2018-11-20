@@ -24,6 +24,11 @@ std::unique_ptr<TIC_TAC_TOE_BOARD> TIC_TAC_TOE_MANAGER::get_game(GameType board_
 	return a;
 }
 
+const std::vector<std::unique_ptr<TIC_TAC_TOE_BOARD>>& TIC_TAC_TOE_MANAGER::get_games()
+{
+	return boards;
+}
+
 void TIC_TAC_TOE_MANAGER::save_game(std::unique_ptr<TIC_TAC_TOE_BOARD> board)
 {
 	update_winner_count(board->get_winner());
