@@ -26,7 +26,36 @@ std::unique_ptr<TIC_TAC_TOE_BOARD> TIC_TAC_TOE_MANAGER::get_game(GameType board_
 
 const std::vector<std::unique_ptr<TIC_TAC_TOE_BOARD>>& TIC_TAC_TOE_MANAGER::get_games()
 {
-	return boards;
+	//TIC_TAC_TOE_BOARD(std::vector<Peg> p);
+
+	// Algorithm to restore a vector of unique ptr of TicTacToeBoard from file.
+	// (Each line in the file is a game(vector of pegs), each character in the line is the peg.val, 
+	// and from left to right position 0, 1, etc.)
+
+	//std::unique_ptr<TIC_TAC_TOE_BOARD> boards;
+	//open file/
+	//while file open
+	//create vector of peg
+	//get a line from file
+	//for each ch in line
+	// create a string with ch
+	//create a peg set val to ch via constructor
+	//add the peg to vector of pegs
+	//add the board to the boards vector
+	//close the file
+
+	//return the boards vector
+
+
+	//std::unique_ptr<TIC_TAC_TOE_BOARD> board;
+
+	//if vector peg size 9
+	//create board of TicTacToe3 using make_unique
+	//else 
+	//create board of TicTacToe4 using make_unique
+
+
+	return get_games();
 }
 
 void TIC_TAC_TOE_MANAGER::save_game(std::unique_ptr<TIC_TAC_TOE_BOARD> board)
