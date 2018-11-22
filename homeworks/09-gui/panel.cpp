@@ -8,6 +8,22 @@ Class Constructor
 Panel::Panel(wxWindow* parent) 
 	: wxPanel(parent, -1)
 {
+	// Problem 6a
+	//Write code to iterate through manager get games function and append a value to the history_list_box.
+
+	std::unique_ptr<TIC_TAC_TOE_MANAGER> manager;
+
+	vector<int> v;
+
+
+	for (unsigned i = 0; i < v.size(); i++)
+	{
+		std::vector<std::unique_ptr<TIC_TAC_TOE_BOARD>>const& boards = manager->get_games();
+	}
+
+	v.push_back(history_list_box);
+
+
 	manager = std::make_unique<TIC_TAC_TOE_MANAGER>();
 
 	auto vbox = new wxBoxSizer(wxVERTICAL);
@@ -278,6 +294,14 @@ void Panel::set_winner_labels()
 	int x, o, c;
 	manager->get_winner_totals(x, o, c);
 	//add code here to update winner_label values
+
+	manager->get_winner_totals->x_winner_label(x);
+	manager->get_winner_totals->x_winner_label(o);
+	manager->get_winner_totals->x_winner_label(c);
+
+
+	//winner_text->SetValue(std::t_string x_winner_label);
+
 
 	this->Layout();
 }

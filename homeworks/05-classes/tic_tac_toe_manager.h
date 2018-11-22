@@ -1,6 +1,7 @@
 #ifndef TIC_TAC_TOE_MANAGER_H
 #define TIC_TAC_TOE_MANAGER_H
 #include "tic_tac_toe_board.h"
+#include "tic_tac_toe_data.h"
 #include "tic_tac_toe_3.h"
 #include "tic_tac_toe_4.h"
 #include <vector>
@@ -13,6 +14,8 @@ class TIC_TAC_TOE_MANAGER
 {
 
 public:
+
+	TIC_TAC_TOE_MANAGER() = default;
 
 	std::unique_ptr<TIC_TAC_TOE_BOARD> get_game(GameType board_type);
 	const std::vector<std::unique_ptr<TIC_TAC_TOE_BOARD>>& get_games();
@@ -28,6 +31,8 @@ private:
 	int x_win{ 0 };
 	int o_win{ 0 };
 	int c_win{ 0 };
+
+	std::unique_ptr<TIC_TAC_TOE_DATA> board;
 
 };
 

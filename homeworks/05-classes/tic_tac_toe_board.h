@@ -15,7 +15,7 @@ public:
 
 	TIC_TAC_TOE_BOARD() = default;
 
-	TIC_TAC_TOE_BOARD(std::vector<Peg> p) {}
+	TIC_TAC_TOE_BOARD(std::vector<Peg> p);
 
 	TIC_TAC_TOE_BOARD(int x, int o, int c) {}
 

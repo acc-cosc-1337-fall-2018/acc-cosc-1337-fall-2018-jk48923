@@ -1,4 +1,5 @@
 #include "tic_tac_toe_3.h"
+#include "tic_tac_toe_board.h"
 #include<iostream>
 
 using std::cout; using std::endl;
@@ -10,6 +11,12 @@ TIC_TAC_TOE_3::TIC_TAC_TOE_3()
 		Peg peg;
 		pegs.push_back(peg);
 	}
+}
+
+TIC_TAC_TOE_3::TIC_TAC_TOE_3(std::vector<Peg> p)
+{
+
+	pegs = p;
 }
 
 

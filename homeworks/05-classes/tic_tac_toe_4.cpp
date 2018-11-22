@@ -12,6 +12,11 @@ TIC_TAC_TOE_4::TIC_TAC_TOE_4()
 	}
 }
 
+TIC_TAC_TOE_4::TIC_TAC_TOE_4(std::vector<Peg> p)
+{
+	pegs = p;
+}
+
 
 void TIC_TAC_TOE_4::display_board(std::ostream& out) const
 {

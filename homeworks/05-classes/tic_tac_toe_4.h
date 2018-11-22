@@ -3,6 +3,7 @@
 #include "tic_tac_toe_board.h"
 #include<iostream>
 #include<string>
+#include<vector>
 
 class TIC_TAC_TOE_4 : public TIC_TAC_TOE_BOARD
 {
@@ -10,6 +11,8 @@ class TIC_TAC_TOE_4 : public TIC_TAC_TOE_BOARD
 public:
 
 	TIC_TAC_TOE_4();
+
+	TIC_TAC_TOE_4(std::vector<Peg> p);
 
 protected:
 

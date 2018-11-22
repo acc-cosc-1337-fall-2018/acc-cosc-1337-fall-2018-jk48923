@@ -7,6 +7,11 @@ using std::string; using std::vector;
 using std::cout; using std::endl;
 
 
+TIC_TAC_TOE_BOARD::TIC_TAC_TOE_BOARD(std::vector<Peg> p)
+{
+	pegs = p;
+}
+
 bool TIC_TAC_TOE_BOARD::game_over()
 {
 	if (check_column_win() == true || check_row_win() == true || check_diagonal_win() == true || check_board_full() == true)
