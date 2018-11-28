@@ -53,13 +53,14 @@ int main()
 
 	//cout << value_reverse << endl;
 
-	//vector<int> grades;
+	vector<int> grades;
 
-	//vector_of_ints(grades);
+	vector_of_ints(grades);
 
 	//get_dna_count();
 
-
+	system("pause");
 
 	return 0;
+
 }

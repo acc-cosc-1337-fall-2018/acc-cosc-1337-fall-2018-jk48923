@@ -8,7 +8,7 @@
 
 //vector<int> grades;
 
-//void vector_of_ints(vector<int> grades);
+void vector_of_ints(std::vector<int> grades);
 
 
 

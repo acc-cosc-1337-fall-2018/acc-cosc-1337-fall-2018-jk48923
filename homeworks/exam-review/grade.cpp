@@ -3,7 +3,7 @@
 #include<string>
 #include<iostream>
 
-using std::vector; using std::cout;
+using std::cout;
 
 
 
@@ -50,7 +50,7 @@ using std::vector; using std::cout;
 //	}
 //}
 
-void vector_of_ints(vector<int> grades)
+void vector_of_ints(std::vector<int> grades)
 {
 	int a{ 0 };
 	int b{ 0 };
@@ -58,27 +58,46 @@ void vector_of_ints(vector<int> grades)
 	int d{ 0 };
 	int f{ 0 };
 
+	cout << "Enter your grade number between 0-100: ";
+	int grade;
+	std::cin >> grade;
+
+//	vector<int> v(vec_size);
+
 	for (auto grade : grades)
 	{
 		if ((grade >= 90) && (grade <= 100))
 		{
 			a++;
+
+			std::cout << "you grade is an: A ";
 		}
 		else if ((grade >= 80) && (grade <= 89))
 		{
 			b++;
+
+			std::cout << "your grade is a: B ";
 		}
 		else if ((grade >= 70) && (grade <= 79))
 		{
 			c++;
+
+			std::cout << "your grade is a: C ";
 		}
 		else if ((grade >= 60) && (grade <= 69))
 		{
 			d++;
+
+			std::cout << "your grade is a: D ";
 		}
 		else if ((grade >= 0) && (grade <= 59))
 		{
+
+			std::cout << "your grade is an: " << f << std::endl;
+
 			f++;
+
+			//std::cout << "your grade is an: " << f << std::endl;
 		}
 	}
 
