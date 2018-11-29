@@ -1,5 +1,6 @@
 #include "panel.h"
 #include<math.h>
+#include <functional>
 
 Panel::Panel(wxWindow* parent) : wxPanel(parent, -1) 
 {	
@@ -35,5 +36,20 @@ void Panel::OnStartTimer(wxCommandEvent & event)
 void Panel::OnTimer(wxTimerEvent & event)
 {
 	clock->draw();
+
+
+	//To auto update the clock graphic,  Bind the timer to the OnTimer Panel class function
+
+	timer->Bind(wxEVT_TIMER, &Panel::OnTimer, this);
+
+	//auto timer = std::bind(&Panel::OnTimer);
+
+
+	Clock clock;
+
+	clock.get_time();
+	
+	
+	
 }
 

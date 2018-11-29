@@ -1,4 +1,5 @@
 #include "clock_graphic.h"
+#include "clock.h"
 
 ClockGraphic::ClockGraphic(wxDC* dc, Point s, Point e) 
 	: device_context(dc), start(s), end(e)
@@ -44,6 +45,8 @@ void ClockGraphic::draw_hours_hand()
 	double hours_angle = 3 / 12.0 * 360.0;
 	device_context->SetPen(wxPen(wxColor(255, 0, 0), 3));
 	draw_hand(hours_angle, 45);
+
+	clock.get_hours();
 }
 
 void ClockGraphic::draw_minutes_hand()
@@ -51,6 +54,8 @@ void ClockGraphic::draw_minutes_hand()
 	double minutes_angle = 30 / 60 * 360;
 	device_context->SetPen(wxPen(wxColor(0, 0, 255), 2));
 	draw_hand(minutes_angle, 90);
+
+	clock.get_minutes();
 }
 
 void ClockGraphic::draw_seconds_hand()
@@ -58,6 +63,8 @@ void ClockGraphic::draw_seconds_hand()
 	double seconds_angle = 45 / 60.0 * 360;
 	device_context->SetPen(wxPen(wxColor(0, 255, 0), 1));
 	draw_hand(seconds_angle, 105);
+
+	clock.get_seconds();
 }
 
 void ClockGraphic::draw_hours_text()
