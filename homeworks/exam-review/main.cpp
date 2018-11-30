@@ -13,6 +13,19 @@ using std::vector; using std::cout; using std::string; using std::cout; using st
 int main()
 {
 
+	// Problem 1 - DNA strings
+	//string s;
+	//get_dna_count(s);
+
+	//string dna;
+	//get_dna_count(dna);
+
+
+	// Problem 2 - Vector of 20 ints
+	//vector<int> grades;
+	//vector_of_ints(grades);
+
+
 	//In main Create 3 Receipt instances with amounts 10, 20, and 30.  
 	//Add the instances to a vector of Receipt, iterate through the vector
 	//to += each instance of receipt into a result Receipt class, and finally out the result total to screen.
@@ -20,6 +33,7 @@ int main()
 	//Receipt a(10);
 	//Receipt b(20);
 	//Receipt c(30);
+
 
 
 	//Line line;
@@ -39,25 +53,21 @@ int main()
 	//	wrsshape.get().draw();
 	//}
 
-	// return by reference
+
+
+
+	// Problem 5 return by reference
 	//string str_by_reference;
-
 	//get_reverse(str_by_reference);
-
 	//cout << get_reverse << endl;
+
 
 	// return by value
 	//string str_by_value;
-
 	//value_reverse(str_by_value);
-
 	//cout << value_reverse << endl;
 
-	vector<int> grades;
 
-	vector_of_ints(grades);
-
-	//get_dna_count();
 
 	system("pause");
 

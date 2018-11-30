@@ -1,4 +1,6 @@
 #include "basics.h"
+#include <iostream>
+
 
 int sum_numbers(int num1, int num2)
 {
@@ -19,3 +21,43 @@ void pass_by_val_by_ref(int val, int& ref)
 
 }
 
+void const_pass_by_val_by_ref(int val, const int & ref)
+{
+}
+
+void pass_by_pointer(int * ptr)
+{
+	//ptr wer're using the address
+	*ptr = 99; // *ptr get the value of address pointed to
+}
+
+void initialize_vector_of_strings()
+{
+}
+
+MyClass::MyClass()
+{
+	std::cout << "Constructor....\n";
+}
+
+MyClass::MyClass(MyClass & my_class)
+{
+	ptr_num = new int(*my_class.ptr_num);
+}
+
+void MyClass::set_ptr_num(int val)
+{
+	*ptr_num = val;
+}
+
+MyClass & MyClass::operator=(MyClass other)
+{
+	ptr_num = new int(*my_class.ptr_num);
+
+	return *this;
+}
+
+MyClass::~MyClass()
+{
+	std::cout << "Num: " << num << " Ptr num: " << *ptr_num << "Address: " << ptr_num << "deconstructor...\n";
+}
