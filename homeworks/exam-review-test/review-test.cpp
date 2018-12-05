@@ -12,9 +12,11 @@ using std::vector; using std::string;
 
 TEST_CASE("test of dna length return output", "dna string ")
 {
-	//vector<string> a{ "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC" };
 
-	vector<int> get_dna_count;
+	vector<int> get_dna_count(string s);
+
+	s = "AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"
+
 		
 	//REQUIRE(get_dna_count("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC") == 20);
 	//REQUIRE(get_dna_count("AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC") == 12);
@@ -34,8 +36,9 @@ TEST_CASE("test of dna length return output", "dna string ")
 // Write a test case to Test that two receipts with bill amount 10 calculates total amount of 26.
 TEST_CASE("Test if the total amount is correct")
 {
-	//REQUIRE(tip == 2.00);
-	//REQUIRE(tax == 1.00);
-	//REQUIRE(total == 13.00);
+	REQUIRE(tip == 2.00);
+	REQUIRE(tax == 1.00);
+	REQUIRE(total == 13.00);
+	REQUIRE(Test.get_total() == 26)
 
 }

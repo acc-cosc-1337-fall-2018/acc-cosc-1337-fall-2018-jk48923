@@ -6,13 +6,6 @@
 using std::endl; using std::cout;
 
 
-//void calculate_tax()
-//{
-//	tax = total * TaxRate;
-//}
-
-
-
 Receipt Receipt::operator+=(const Receipt & b)
 {
 	Receipt receipt;
@@ -23,7 +16,6 @@ Receipt Receipt::operator+=(const Receipt & b)
 
 	return receipt;
 }
-
 
 std::ostream & operator<<(std::ostream & out, const Receipt & POINTER_O)
 {
@@ -49,30 +41,17 @@ std::istream & operator>>(std::istream & in, Receipt & POINTER_I)
 	std::cout << "Enter tax amount: ";
 	in >> POINTER_I.tax;
 
-
 	return in;
 }
 
-//double Receipt::get_total()
-//{
-//	double compute_result;
-//
-//	compute_result = bill + tip + tax;
-//
-//	return compute_result;
-//}
-
-//double Receipt::get_total() const
-//{
-//	return total;
-//}
-
-double Receipt::get_total() const
+double Receipt::get_total()
 {
-	double compute_result;
+	//double compute_result;
 
-	compute_result = bill + tip + tax;
+	//compute_result = bill + tip + tax;
 
-	return compute_result;
+	//return compute_result;
+
+	return total;
 }
 

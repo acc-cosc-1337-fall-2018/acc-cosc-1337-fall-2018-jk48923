@@ -26,6 +26,7 @@ int main()
 	//vector_of_ints(grades);
 
 
+	// Problem 3
 	//In main Create 3 Receipt instances with amounts 10, 20, and 30.  
 	//Add the instances to a vector of Receipt, iterate through the vector
 	//to += each instance of receipt into a result Receipt class, and finally out the result total to screen.
@@ -35,7 +36,7 @@ int main()
 	//Receipt c(30);
 
 
-
+	// Problem 4
 	//Line line;
 	//Shape& shape = line;
 	//shape.draw();
@@ -54,19 +55,21 @@ int main()
 	//}
 
 
-
-
 	// Problem 5 return by reference
 	//string str_by_reference;
 	//get_reverse(str_by_reference);
 	//cout << get_reverse << endl;
 
 
-	// return by value
+	// Problem 6 return by value
 	//string str_by_value;
 	//value_reverse(str_by_value);
 	//cout << value_reverse << endl;
 
+	// Problem 7 const return by reference
+	const string str_by_reference;
+	get_reverse(str_by_reference);
+	cout << get_reverse << endl;
 
 
 	system("pause");

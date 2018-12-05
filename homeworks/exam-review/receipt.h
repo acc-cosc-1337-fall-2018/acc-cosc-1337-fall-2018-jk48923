@@ -10,7 +10,7 @@ public:
 
 	Receipt() = default;
 	Receipt(double b, double t, double tx) : bill(b), tip(t), tax(tx) {}
-	double get_total() const;
+	double get_total();
 
 	Receipt operator+=(const Receipt & b);
 	friend std::ostream & operator<<(std::ostream & out, const Receipt & POINTER_O);
