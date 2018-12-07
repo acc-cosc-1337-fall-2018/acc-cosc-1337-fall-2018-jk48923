@@ -46,12 +46,11 @@ std::istream & operator>>(std::istream & in, Receipt & POINTER_I)
 
 double Receipt::get_total()
 {
-	//double compute_result;
+	double compute_result;
 
-	//compute_result = bill + tip + tax;
+	compute_result = bill + tip + tax;
 
-	//return compute_result;
+	return compute_result;
 
-	return total;
 }
 

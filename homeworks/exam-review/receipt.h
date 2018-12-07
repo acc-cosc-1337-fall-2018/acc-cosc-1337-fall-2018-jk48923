@@ -18,10 +18,10 @@ public:
 
 private:
 	
-	double bill{ 0 };
+	double bill{ 0.0 };
 	double tip{ 0.15 };
 	double tax{ 0.0825 };
-	double total{ bill + tip + tax };
+	double total = get_total();
 
 };
 

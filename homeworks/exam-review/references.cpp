@@ -6,7 +6,7 @@ using std::string; using std::cout; using std::endl;
 
 
 //Incorrect implementation, simply reverse string
-void get_reverse(string str_by_reference)
+void get_reverse(string& str_by_reference)
 {
 	string reverse_order = "CGAT";
 
@@ -82,7 +82,6 @@ string value_reverse(string& str_by_value)
 //Create a void function with a const string reference parameter named str_by_reference.
 //The function will reverse the string with a loop.In main, create a string and display it,
 //call the function with the created string as an argument, and display the same string in main to string.
-//Why does the compiler let you change or not let you change the incoming const reference parameter ?
 
 void string_reference(const string& str_by_reference)
 {

@@ -14,11 +14,8 @@ int main()
 {
 
 	// Problem 1 - DNA strings
-	//string s;
-	//get_dna_count(s);
-
-	//string dna;
-	//get_dna_count(dna);
+	string s;
+	get_dna_count(s);
 
 
 	// Problem 2 - Vector of 20 ints
@@ -60,17 +57,24 @@ int main()
 	//get_reverse(str_by_reference);
 	//cout << get_reverse << endl;
 
+	//Why does the string change or not change?
+	// The string changes because it is a return by reference 
 
 	// Problem 6 return by value
 	//string str_by_value;
 	//value_reverse(str_by_value);
 	//cout << value_reverse << endl;
 
-	// Problem 7 const return by reference
-	const string str_by_reference;
-	get_reverse(str_by_reference);
-	cout << get_reverse << endl;
+	//Is the main created string the same variable(is it at the same memory address) as the returned string why or why not?
+	// Yes because it is a reference
 
+	// Problem 7 const return by reference
+	//string str_by_reference;
+	//get_reverse(str_by_reference);
+	//cout << get_reverse << endl;
+
+	//Why does the compiler let you change or not let you change the incoming const reference parameter?
+	// It does not change because the reference parameter is a constant
 
 	system("pause");
 
