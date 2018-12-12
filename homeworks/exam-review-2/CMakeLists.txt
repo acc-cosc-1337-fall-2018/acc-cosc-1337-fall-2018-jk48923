@@ -1,5 +1,6 @@
-project(exam_review_2_library)
+project(final_exam_library)
 
-add_library(exam_review_2_library "test.cpp" "test.h")
-add_executable(exam_review_2_exe "main.cpp" "test.cpp")
-target_link_libraries(exam_review_2_exe exam_review_2_library)
+add_library(final_exam_library "receipt.cpp" "receipt.h" "test.cpp" "test.h" "test3.cpp" "test3.h" "test4.h" "test4.cpp"
+													"TaxExemptReceipt.h" "TaxExemptReceipt.cpp" "shape.h" "shape.cpp")
+add_executable(final_exam_exe "main.cpp" "receipt.cpp" "test.cpp" "test3.cpp" "test4.cpp" "TaxExemptReceipt.cpp" "shape.cpp")
+target_link_libraries(final_exam_exe final_exam_library)
